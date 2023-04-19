@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import isEmail from "validator/lib/isEmail";
 import isEmpty from "validator/lib/isEmpty";
-import { createAccountApi,activeAccountApi } from "./register.api";
+import Api from "../API/api";
 
-function RegisterApi() {
+function useLogicLogic() {
   const [formData, setFormData] = useState({
     fullname: { value: "", error: "" },
     email: { value: "", error: "" },
@@ -57,34 +57,29 @@ function RegisterApi() {
     const isValid = validate();
     if (!isValid) return;
     setLoading(false);
-    let res = {};
     try {
-      console.log("1")
-     res =await createAccountApi(formData);
+      const res = Api().createAccount();
       console.log("res->", res);
-      console.log(res.data);
       console.log(res.data.user);
+      try {
+        const response = Api.activeAccount(res.data.user);
+        if (response.data.status === 200) {
+          setLoading(false);
+        }
+        setLoading(true);
+        toast.success("Đăng kí thành công!", {closeButton: false,});
+        await delay(2000);
+        navigate("/");
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     } catch (error) {
       setLoading(true);
-      console.log(11);
       console.log(error);
       toast.error("Tài khoản đã tồn tại", {
         closeButton: false,
       });
-    }
-    let response = {};
-    try {
-     response = await activeAccountApi(res.data.user)
-      if (response.data.status === 200) {
-        setLoading(false);
-      }
-      setLoading(true);
-      toast.success("Đăng kí thành công!", {closeButton: false,});
-      await delay(2000);
-      navigate("/");
-      console.log(response);
-    } catch (error) {
-      console.log("error phase 1");
     }
   }
   function delay(ms) {
@@ -117,4 +112,4 @@ function RegisterApi() {
   };
 }
 
-export default RegisterApi;
+export default useLogicLogic;

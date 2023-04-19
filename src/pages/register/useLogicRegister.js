@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import isEmail from "validator/lib/isEmail";
 import isEmpty from "validator/lib/isEmpty";
-import { createAccountApi,activeAccountApi } from "./register.api";
+import { createAccountApi,activeAccountApi } from "../../Components/API/register.api";
 
-function RegisterApi() {
+function useLogicRegister() {
   const [formData, setFormData] = useState({
     fullname: { value: "", error: "" },
     email: { value: "", error: "" },
@@ -117,4 +117,4 @@ function RegisterApi() {
   };
 }
 
-export default RegisterApi;
+export default useLogicRegister;

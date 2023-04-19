@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import LoginPage from "./Components/Login";
-import RegisterPage from "./Components/Register";
+import RegisterPage from "./pages/register/RegisterPage";
 import ForgotpasswordPage from "./Components/Forgotpassword";
 import "./App.css";
 //<LoginPage /> nó là react element

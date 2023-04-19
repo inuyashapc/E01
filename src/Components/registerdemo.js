@@ -43,3 +43,18 @@
     // .catch(function (error) {
     //   console.log(error);
     // });
+
+    {/* {loading ? (
+          <button
+            type="button"
+            onClick={signUp}
+            id="mybtn"
+            disabled={!isChecked}
+          >
+            Create Account
+          </button>
+        ) : (
+          <button className="button">
+            <div className="loader"></div>
+          </button>
+        )} */}
