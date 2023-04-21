@@ -1,6 +1,6 @@
 import vn from "../../images/vietnam 1.png";
 import layer from "../../images/Layer 1.png";
-import '../register/register.css'
+import "../register/register.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
@@ -70,19 +70,19 @@ function Register() {
         </div>
         <div className="checkbox">
           <input
-          name="isChecked"
+            name="isChecked"
             type="checkbox"
-            value={formData.isChecked.value ? 'false':'true'}
+            value={formData.isChecked.value ? "false" : "true"}
             onChange={onChangeValue}
           />
           I accept Levion’s <span>Terms of Service </span> and
           <span> Privacy Policy</span>.
         </div>
-        
+
         {loading ? (
           <button
             type="button"
-            onClick={signUp}
+            onClick={debounce(signUp, 3000)}
             id="mybtn"
             disabled={!formData.isChecked.value}
           >

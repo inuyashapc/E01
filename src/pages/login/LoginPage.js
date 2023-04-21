@@ -1,93 +1,59 @@
-import vn from "../images/vietnam 1.png";
-import layer from "../images/Layer 1.png";
-import React from 'react'
-import useLogicLogic from './useLogicLogic'
-import { ToastContainer } from 'react-toastify'
-import { Link } from 'react-router-dom'
-
-export default function LoginPage() {
-    const {debounce,formData,loading,onChangeValue,setFormData,setLoading,signUp,validMsg} = useLogicLogic()
+import vn from "../../images/vietnam 1.png";
+import layer from "../../images/Layer 1.png";
+import "../login/Login.css";
+import { Link } from "react-router-dom";
+import useLogicLogin from "./useLogicLogin";
+import { ToastContainer } from "react-toastify";
+function Login() {
+  const { handleChange, submitForm,loginData } = useLogicLogin();
   return (
     <>
-    <div className="register-background">
-      <img src={vn} alt="" />
-    </div>
-    <form>
-      <div className="register-detail-img">
-        <img src={layer} alt="" />
+      <div className="register-background">
+        <img src={vn} alt="a" />
       </div>
-      <h2>Create an account</h2>
-      <div className="content">
-        <label htmlFor="fullname">
-          Full Name <span style={{ color: "red" }}>*</span>
-        </label>
-        <br />
-        <input
-          name="fullname"
-          type="text"
-          placeholder="Your Name"
-          onChange={onChangeValue}
-        />
-        <br />
-        <small style={{ color: "red" }}>{validMsg.fullname}</small>
-        <br />
-        <label htmlFor="email">
-          Email <span style={{ color: "red" }}>*</span>
-        </label>
-        <br />
-        <input
-          name="email"
-          type="email"
-          placeholder="Your Email"
-          onChange={onChangeValue}
-        />
-        <br />
-        <label htmlFor="password">
-          Password <span style={{ color: "red" }}>*</span>
-        </label>
-        <br />
-        <small style={{ color: "red" }}>{validMsg.email}</small>
-        <br />
-        <input
-          name="password"
-          type="password"
-          placeholder="Your Password"
-          onChange={onChangeValue}
-        />
-        <br />
-        <small style={{ color: "red" }}>{validMsg.password}</small>
-        <br />
-      </div>
-      <div className="checkbox">
-        <input
-        name="isChecked"
-          type="checkbox"
-          value={formData.isChecked.value ? 'false':'true'}
-          onChange={onChangeValue}
-        />
-        I accept Levion’s <span>Terms of Service </span> and
-        <span> Privacy Policy</span>.
-      </div>
-      
-      {loading ? (
-        <button
-          type="button"
-          onClick={signUp}
-          id="mybtn"
-          disabled={!formData.isChecked.value}
-        >
-          Create Account
+      <form>
+        <div className="register-detail-img">
+          <img src={layer} alt="a" />
+        </div>
+        <h2>Sign in to your account</h2>
+        <div className="content">
+          <label htmlFor="email">Email</label>
+          <br />
+          <input
+            name="email"
+            type="email"
+            placeholder="Your Email"
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <small style={{ color: "red" }}>{loginData.email.error}</small>
+          <br />
+          <label htmlFor="password">Password</label>
+          <br />
+          <input
+            name="password"
+            type="password"
+            placeholder="Your Password"
+            onChange={handleChange}
+            required
+          />
+          <br />
+          <small style={{ color: "red" }}>{loginData.password.error}</small>
+          <br />
+        </div>
+        <button type="button" onClick={submitForm}>
+          Sign in
         </button>
-      ) : (
-        <button type="button">
-          <div className="loader"></div>
-        </button>
-      )}
-      <ToastContainer />
-      <p>
-        Already have an account? <Link to="/">Sign in</Link>
-      </p>
-    </form>
-  </>
-  )
+        <ToastContainer/>
+        <div className="forgot">
+          <Link to="/forgot">Forgot password</Link>
+        </div>
+        <p>
+          Already have an account? <Link to="/register">Sign up</Link>
+        </p>
+      </form>
+    </>
+  );
 }
+export default Login;
