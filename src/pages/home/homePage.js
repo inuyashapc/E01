@@ -96,7 +96,7 @@ function HomePage() {
               </div>
               <div className="part-third-detail">
                 <div className="third">
-                  <div>
+                  <div className="third-details">
                     <img src={achievement} alt="anh" />
                     <h2>Diverse courses of choice</h2>
                     <p>
@@ -105,7 +105,7 @@ function HomePage() {
                       dolor.
                     </p>
                   </div>
-                  <div>
+                  <div className="third-details">
                     <img src={achievement} alt="anh" />
                     <h2>Diverse courses of choice</h2>
                     <p>

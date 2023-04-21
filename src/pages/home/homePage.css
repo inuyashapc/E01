@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* background-color: rgb(230, 197, 230); */
 }
 .header {
   width: 70%;
@@ -75,8 +76,12 @@ body {
 .part-second-image h4 {
   color: #585757;
 }
+.part-third{
+  margin-top: 16%;
+}
 .part-third-content {
   display: flex;
+  justify-content: space-between;
 }
 .third {
   display: flex;
@@ -87,13 +92,13 @@ body {
   text-align: right;
 }
 .part-third-image {
-  width: 30%;
+  width: 25%;
 }
 .part-third-image img {
   width: 100%;
 }
 .part-third-detail {
-  width: 70%;
+  width: 65%;
 }
 .image-home-2 {
   display: flex;
@@ -102,6 +107,7 @@ body {
   text-align: left;
   padding: 5% 5%;
   border-radius: 39px;
+  margin-top: 12%;
 }
 .image-home-title {
   width: 16%;

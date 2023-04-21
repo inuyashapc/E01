@@ -10,7 +10,7 @@ import isEmail from "validator/lib/isEmail";
 function useLogicLogin() {
   const errorEmail = "Email đăng nhập đã tồn tại";
   const errorPassword = "Password đăng nhập không đúng";
-
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
     email: { value: "", error: "" },
     password: { value: "", error: "" },
