@@ -37,6 +37,7 @@ function Register() {
             type="text"
             placeholder="Your Name"
             onChange={onChangeValue}
+            disabled={!loading}
           />
           <br />
           <small style={{ color: "red" }}>{validMsg.fullname}</small>
@@ -50,6 +51,7 @@ function Register() {
             type="email"
             placeholder="Your Email"
             onChange={onChangeValue}
+            disabled={!loading}
           />
           <br />
           <label htmlFor="password">
@@ -63,6 +65,7 @@ function Register() {
             type="password"
             placeholder="Your Password"
             onChange={onChangeValue}
+            disabled={!loading}
           />
           <br />
           <small style={{ color: "red" }}>{validMsg.password}</small>
@@ -74,6 +77,7 @@ function Register() {
             type="checkbox"
             value={formData.isChecked.value ? "false" : "true"}
             onChange={onChangeValue}
+            disabled={!loading}
           />
           I accept Levion’s <span>Terms of Service </span> and
           <span> Privacy Policy</span>.
