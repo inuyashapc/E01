@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <img src={logo}></img>
+        <img src={logo} alt="logo"></img>
         <div className="navbar-category">
           <a href="#">Level Test</a>
           <a href="#">Courses</a>
@@ -14,8 +14,8 @@ export default function Navbar() {
           <a href="#">About us</a>
         </div>
         <div className="navbar-right">
-          <img src={cart}></img>
-          <Link to='/'><button>Sign in</button></Link>
+          <img src={cart} alt="cart"></img>
+          <Link to='/'><button id="btn-left">Sign in</button></Link>
           <Link to='/register'><button>Sign up</button></Link>
         </div>
       </div>

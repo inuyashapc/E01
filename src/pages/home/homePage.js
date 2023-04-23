@@ -14,10 +14,14 @@ import h12 from "../../images/h12.png";
 import h13 from "../../images/h13.png";
 import h14 from "../../images/h14.png";
 import cow from "../../images/cow.png";
+import hinhchunhat from "../../images/hinhchunhat.png";
 import fb from "../../images/facebook.png";
 import discord from "../../images/discord.png";
+import vector11 from "../../images/Vector 1.png";
+import star from "../../images/star.png";
 import Navbar from "../navbar/navbar";
 import "./homePage.css";
+import Footer from "../footer/footer";
 function HomePage() {
   return (
     <>
@@ -95,6 +99,9 @@ function HomePage() {
                 <img src={learn} alt="anh" />
               </div>
               <div className="part-third-detail">
+                <div className="hinhchunhat">
+                  <img src={hinhchunhat} alt="hinhchunhat"></img>
+                </div>
                 <div className="third">
                   <div className="third-details">
                     <img src={achievement} alt="anh" />
@@ -107,7 +114,7 @@ function HomePage() {
                   </div>
                   <div className="third-details">
                     <img src={achievement} alt="anh" />
-                    <h2>Diverse courses of choice</h2>
+                    <h2>Quality lessons with designated journeys</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Id sodales non interdum eget. Platea et quam magna tortor,
@@ -116,18 +123,18 @@ function HomePage() {
                   </div>
                 </div>
                 <div className="third">
-                  <div>
+                  <div className="third-details">
                     <img src={achievement} alt="anh" />
-                    <h2>Diverse courses of choice</h2>
+                    <h2>Fun and intuitive ways of learning</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Id sodales non interdum eget. Platea et quam magna tortor,
                       dolor.
                     </p>
                   </div>
-                  <div>
+                  <div className="third-details">
                     <img src={achievement} alt="anh" />
-                    <h2>Diverse courses of choice</h2>
+                    <h2>Flexible</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Id sodales non interdum eget. Platea et quam magna tortor,
@@ -167,6 +174,19 @@ function HomePage() {
             <div className="part-four-detail">
               <div className="part-four-details">
                 <div className="fixed-content">
+                  <div className="vote">
+                    <div className="vote-left">
+                      <img src={vector11} alt="vector11"></img>&nbsp;
+                      <img src={vector11} alt="vector11"></img>
+                    </div>
+                    <div className="vote-right">
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>
+                    </div>
+                  </div>
                   <p>
                     As a Vietnamese learner, you might have realized that
                     pronunciation is not an easy task. I had very refreshing
@@ -185,6 +205,19 @@ function HomePage() {
               </div>
               <div className="part-four-details">
                 <div className="fixed-content">
+                  <div className="vote">
+                    <div className="vote-left">
+                      <img src={vector11} alt="vector11"></img>&nbsp;
+                      <img src={vector11} alt="vector11"></img>
+                    </div>
+                    <div className="vote-right">
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>
+                    </div>
+                  </div>
                   <p>
                     It is amazing to see my progress even after so many lessons
                     and each one brings me forward! I am so glad that I found
@@ -202,6 +235,19 @@ function HomePage() {
               </div>
               <div className="part-four-details">
                 <div className="fixed-content">
+                  <div className="vote">
+                    <div className="vote-left">
+                      <img src={vector11} alt="vector11"></img>&nbsp;
+                      <img src={vector11} alt="vector11"></img>
+                    </div>
+                    <div className="vote-right">
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>&nbsp;&nbsp;
+                      <img src={star} alt="star"></img>
+                    </div>
+                  </div>
                   <p>
                     Quyen - The instructor of the pronunciation course is a
                     fantastic teacher. She is very knowledgable. I took the
@@ -215,7 +261,7 @@ function HomePage() {
                   <div className="card-name-images">
                     <img src={h11} alt="anh" />
                   </div>
-                  
+
                   <div>
                     <h4>Gina H.</h4>
                     <p>Master Your Pronunciation Course</p>
@@ -261,17 +307,9 @@ function HomePage() {
             <input name="email" type="email" placeholder="Enter your email" />
             <button>Subscribe</button>
           </div>
-          <div>
-            <div>
-              <a href="#">Home</a>
-              <a href="#">Level Test</a>
-              <a href="#">Courses</a>
-              <a href="#">Learning Resources</a>
-              <a href="#">About us</a>
-            </div>
-          </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,0 +1,33 @@
+#footer-bg img {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+#footer {
+  position: relative;
+  margin-top: 12%;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: auto;
+}
+.category a,
+p {
+  color: #ffffff;
+}
+.category a:hover {
+  font-weight: bold;
+}
+#logo {
+  margin-top: 18%;
+}
+.social-media{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2% auto;
+}

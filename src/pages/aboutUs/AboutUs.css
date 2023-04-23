@@ -1,0 +1,89 @@
+.first {
+  display: flex;
+  background: linear-gradient(0deg, #9453ff, #9453ff),
+    url("../../images/first.png");
+  background-blend-mode: soft-light, normal;
+}
+.aboutUs h1 {
+  color: #362355;
+}
+.aboutUs p {
+  color: #554766;
+}
+.first h1 {
+  color: #9453ff;
+}
+.first-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-self: center;
+  width: 70%;
+  padding-left: 120px;
+  padding-right: 20px;
+}
+.first-images {
+  width: 30%;
+  margin: 20px;
+}
+.first-images img {
+  width: 100%;
+}
+.second {
+  display: flex;
+  text-align: left;
+}
+.second-left {
+  width: 40%;
+  margin: auto;
+}
+.second-right {
+  width: 50%;
+}
+.third {
+  display: flex;
+}
+.third-left {
+  width: 50%;
+  text-align: right;
+}
+.third-right {
+  width: 50%;
+}
+.fourth {
+  display: flex;
+  text-align: left;
+}
+.fourth-left {
+  width: 50%;
+}
+.fourth-right {
+  width: 50%;
+}
+.fifth {
+  display: flex;
+  text-align: left;
+}
+.fifth-left {
+  width: 60%;
+}
+.fifth-right {
+  width: 40%;
+}
+.sixth {
+  display: flex;
+  text-align: left;
+}
+.second-right {
+  position: relative;
+  z-index: -1;
+}
+.second-right img {
+  position: relative;
+}
+.play {
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  /* transform: translate(-50%, -50%); */
+}
