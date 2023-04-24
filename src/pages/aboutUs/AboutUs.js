@@ -13,6 +13,13 @@ import a66 from "../../images/AboutUs/a66.png";
 import play from "../../images/AboutUs/Play.png";
 import eyes from "../../images/AboutUs/eyes.png";
 import mission from "../../images/AboutUs/misson.png";
+import chambi from "../../images/AboutUs/chambi.png";
+import may from "../../images/AboutUs/may.png";
+import van from "../../images/AboutUs/van.png";
+import tamgiac from "../../images/AboutUs/tamgiac.png";
+import nuahinhtron from "../../images/AboutUs/nuahinhtron.png";
+import van2 from "../../images/AboutUs/van2.png";
+import may2 from "../../images/AboutUs/may2.png";
 import Footer from "../footer/footer";
 import "./AboutUs.css";
 export default function AboutUs() {
@@ -20,6 +27,9 @@ export default function AboutUs() {
     <div className="aboutUs">
       <Navbar />
       <div className="first">
+        <div className="chambi">
+          <img src={chambi} alt="chambi"></img>
+        </div>
         <div className="first-details">
           <h1>Who are we?</h1>
           <p>
@@ -34,6 +44,18 @@ export default function AboutUs() {
         </div>
       </div>
       <div className="second">
+        <div className="may">
+          <img src={may} alt="may"></img>
+        </div>
+        <div className="van">
+          <img src={van} alt="van"></img>
+        </div>
+        <div className="tamgiac">
+          <img src={tamgiac} alt="tamgiac"></img>
+        </div>
+        <div className="nuahinhtron">
+          <img src={nuahinhtron} alt="nuahinhtron"></img>
+        </div>
         <div className="second-left">
           <h2>The Levion story</h2>
           <p>
@@ -54,6 +76,15 @@ export default function AboutUs() {
       <div className="thirds">
         <div className="third-left">
           <img src={a3} alt="a1"></img>
+          <div className="chambi2">
+            <img src={chambi} alt="van"></img>
+          </div>
+        </div>
+        <div className="may2">
+          <img src={may2} alt="may2"></img>
+        </div>
+        <div className="van2">
+          <img src={van2} alt="van2"></img>
         </div>
         <div className="third-right">
           <div className="third-right-details">
@@ -81,6 +112,12 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
+        <div className="van41">
+          <img src={van} alt="van41"></img>
+        </div>
+        <div className="tamgiac41">
+          <img src={tamgiac} alt="tamgiac41"></img>
+        </div>
         <div className="fourth-right">
           <img src={a4} alt="a1"></img>
         </div>
@@ -102,6 +139,9 @@ export default function AboutUs() {
               dignissim tortor dignissim molestie.
             </p>
           </div>
+        </div>
+        <div className="van52">
+          <img src={van2} alt="van2"></img>
         </div>
         <div className="fifth-right">
           <img src={a5} alt="a1"></img>

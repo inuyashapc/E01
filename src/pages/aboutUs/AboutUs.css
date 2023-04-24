@@ -36,7 +36,7 @@
 }
 .second-left {
   width: 40%;
-  margin: auto;
+  margin: 7% 8%;
 }
 .second-right {
   width: 50%;
@@ -44,10 +44,13 @@
 .thirds {
   display: flex;
   margin-bottom: 0;
+  margin-top: 10%;
+  position: relative;
 }
 .third-left {
   width: 50%;
   text-align: right;
+  position: relative;
 }
 .third-right {
   width: 50%;
@@ -56,6 +59,7 @@
 .fourth {
   display: flex;
   text-align: left;
+  position: relative;
 }
 .fourth-left {
   width: 50%;
@@ -66,6 +70,8 @@
 .fifth {
   display: flex;
   text-align: left;
+  margin-top: 10%;
+  position: relative;
 }
 .fifth-left {
   width: 60%;
@@ -76,6 +82,7 @@
 .sixth {
   display: flex;
   text-align: left;
+  margin-top: 10%;
 }
 .second-right {
   position: relative;
@@ -142,4 +149,64 @@
 }
 .six-details-contents {
   margin: 20% 15% 20% 40%;
+}
+.chambi {
+  position: absolute;
+  top: 51%;
+  left: 11%;
+  z-index: -1;
+}
+.second {
+  position: relative;
+}
+.may {
+  position: absolute;
+  top: -35%;
+}
+.van {
+  position: absolute;
+  top: -25%;
+}
+.tamgiac {
+  position: absolute;
+  left: 15%;
+}
+.nuahinhtron {
+  position: absolute;
+  top: 40%;
+}
+.may2 {
+  position: absolute;
+  right: 0%;
+  top: -55%;
+  z-index: -2;
+}
+.van2 {
+  position: absolute;
+  right: 0%;
+  top: -40%;
+  z-index: -2;
+}
+.chambi2 {
+  position: absolute;
+  left: 72%;
+  bottom: -7%;
+  z-index: -1;
+}
+.van41 {
+  position: absolute;
+  top: -28%;
+  left: 0%;
+  z-index: 1;
+}
+.tamgiac41 {
+  position: absolute;
+  bottom: -25%;
+  left: 40%;
+}
+.van52 {
+  position: absolute;
+  right: 0%;
+  top: 15%;
+  z-index: 2;
 }
