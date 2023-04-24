@@ -13,10 +13,9 @@
   display: flex;
   justify-content: space-between;
   width: 40%;
-  margin: auto;
+  margin: 2% auto;
 }
-.category a,
-p {
+.category a {
   color: #ffffff;
 }
 .category a:hover {
@@ -25,9 +24,15 @@ p {
 #logo {
   margin-top: 18%;
 }
-.social-media{
+.social-media {
   width: 20%;
   display: flex;
   justify-content: space-between;
   margin: 2% auto;
+}
+p{
+  color: #FFFFFF;
+}
+.title p{
+  color: #FFFFFF !important;
 }

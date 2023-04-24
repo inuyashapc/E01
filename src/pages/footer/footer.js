@@ -29,7 +29,9 @@ export default function Footer() {
         <img src={yt} alt="footer"></img>
         <img src={tiktok} alt="footer"></img>
       </div>
-      <p>©2022 Levion. All copyrights reserved</p>
+      <div className="title">
+        <p>©2022 Levion. All copyrights reserved</p>
+      </div>
     </>
   );
 }

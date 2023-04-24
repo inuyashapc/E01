@@ -8,10 +8,10 @@ export default function Navbar() {
       <div className="navbar">
         <img src={logo} alt="logo"></img>
         <div className="navbar-category">
-          <a href="#">Level Test</a>
-          <a href="#">Courses</a>
-          <a href="#">Learning Resources</a>
-          <a href="#">About us</a>
+          <Link to='/#'>Level Test</Link>
+          <Link to='/#'>Courses</Link>
+          <Link to='/#'>Learning Resources</Link>
+          <Link to='/aboutUs'>About us</Link>
         </div>
         <div className="navbar-right">
           <img src={cart} alt="cart"></img>
