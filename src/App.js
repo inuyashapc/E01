@@ -5,6 +5,7 @@ import ForgotpasswordPage from "./Components/Forgotpassword";
 import AboutUs from "./pages/aboutUs/AboutUs";
 import "./App.css";
 import HomePage from "./pages/home/homePage";
+import CourseList from "./pages/courseList/courseList";
 //<LoginPage /> nó là react element
 //LoginPage là react component
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/forgot" element={<ForgotpasswordPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/aboutUs" element={<AboutUs />} />
+        <Route path="/courseList" element={<CourseList />} />
       </Routes>
     </div>
   );

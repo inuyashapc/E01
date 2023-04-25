@@ -1,212 +1,261 @@
-.first {
-  display: flex;
-  background: linear-gradient(0deg, #9453ff, #9453ff),
-    url("../../images/first.png");
-  background-blend-mode: soft-light, normal;
-}
-.aboutUs h2 {
-  color: #362355;
-}
-.aboutUs p {
-  color: #554766;
-}
-.first h1 {
-  color: #9453ff;
-}
-.first-details {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-self: center;
-  width: 70%;
-  padding-left: 120px;
-  padding-right: 20px;
-}
-.first-images {
-  width: 30%;
-  margin: 20px;
-}
-.first-images img {
-  width: 100%;
-}
-.second {
-  display: flex;
-  text-align: left;
-  margin-top: 5%;
-}
-.second-left {
-  width: 40%;
-  margin: 7% 8%;
-}
-.second-right {
-  width: 50%;
-}
-.thirds {
-  display: flex;
-  margin-bottom: 0;
-  margin-top: 10%;
-  position: relative;
-}
-.third-left {
-  width: 50%;
-  text-align: right;
-  position: relative;
-}
-.third-right {
-  width: 50%;
-  text-align: left;
-}
-.fourth {
-  display: flex;
-  text-align: left;
-  position: relative;
-}
-.fourth-left {
-  width: 50%;
-}
-.fourth-right {
-  width: 50%;
-}
-.fifth {
-  display: flex;
-  text-align: left;
-  margin-top: 10%;
-  position: relative;
-}
-.fifth-left {
-  width: 60%;
-}
-.fifth-right {
-  width: 40%;
-}
-.sixth {
-  display: flex;
-  text-align: left;
-  margin-top: 10%;
-}
-.second-right {
-  position: relative;
-  z-index: -1;
-}
-.second-right img {
-  position: relative;
-}
-.play {
-  position: absolute;
-  top: 40%;
-  left: 34%;
-  /* transform: translate(-50%, -50%); */
-}
-.fourth-left-detail {
-  margin: 10% 10% 15% 16%;
-}
-.third-right-details {
-  margin: 12% 10% 15% 10%;
-}
-.fifth-details {
-  margin: 10% 15% 15% 14%;
-}
-.six-details {
-  background-color: #f3eff9;
-  width: 50%;
-  border-radius: 0px 32px 32px 0px;
-}
-.six-images {
-  width: 50%;
-  display: flex;
-  /* justify-content: space-around; */
-  text-align: center;
-}
-.six-details h2 {
-  color: #9453ff;
-}
-.six-details p {
-  color: #9387a8;
-}
-.i21,
-.i22,
-.i23 {
-  margin-top: 20%;
-}
-.i12 {
-  margin-top: 50%;
-  margin-left: 40%;
-}
-.i21 {
-  margin-left: 20%;
-}
-.i11 {
-  margin-left: 40%;
-}
-.i22 {
-  margin-left: 16%;
-}
-.i13 {
-  margin-left: 20%;
-}
-.i23 {
-  margin-left: 40%;
-}
-.six-details-contents {
-  margin: 20% 15% 20% 40%;
-}
-.chambi {
-  position: absolute;
-  top: 51%;
-  left: 11%;
-  z-index: -1;
-}
-.second {
-  position: relative;
-}
-.may {
-  position: absolute;
-  top: -35%;
-}
-.van {
-  position: absolute;
-  top: -25%;
-}
-.tamgiac {
-  position: absolute;
-  left: 15%;
-}
-.nuahinhtron {
-  position: absolute;
-  top: 40%;
-}
-.may2 {
-  position: absolute;
-  right: 0%;
-  top: -55%;
-  z-index: -2;
-}
-.van2 {
-  position: absolute;
-  right: 0%;
-  top: -40%;
-  z-index: -2;
-}
-.chambi2 {
-  position: absolute;
-  left: 72%;
-  bottom: -7%;
-  z-index: -1;
-}
-.van41 {
-  position: absolute;
-  top: -28%;
-  left: 0%;
-  z-index: 1;
-}
-.tamgiac41 {
-  position: absolute;
-  bottom: -25%;
-  left: 40%;
-}
-.van52 {
-  position: absolute;
-  right: 0%;
-  top: 15%;
-  z-index: 2;
+@media screen and (min-width: 1280px) {
+  .first {
+    display: flex;
+    background: linear-gradient(0deg, #9453ff, #9453ff),
+      url("../../images/first.png");
+    background-blend-mode: soft-light, normal;
+  }
+
+  .aboutUs h2 {
+    color: #362355;
+  }
+
+  .aboutUs p {
+    color: #554766;
+  }
+
+  .first h1 {
+    color: #9453ff;
+  }
+
+  .first-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    width: 70%;
+    padding-left: 120px;
+    padding-right: 20px;
+  }
+
+  .first-images {
+    width: 30%;
+    margin: 20px;
+  }
+
+  .first-images img {
+    width: 100%;
+  }
+
+  .second {
+    display: flex;
+    text-align: left;
+    margin-top: 5%;
+  }
+
+  .second-left {
+    width: 40%;
+    margin: 7% 8%;
+  }
+
+  .second-right {
+    width: 50%;
+  }
+
+  .thirds {
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 10%;
+    position: relative;
+  }
+
+  .third-left {
+    width: 50%;
+    text-align: right;
+    position: relative;
+  }
+
+  .third-right {
+    width: 50%;
+    text-align: left;
+  }
+
+  .fourth {
+    display: flex;
+    text-align: left;
+    position: relative;
+  }
+
+  .fourth-left {
+    width: 50%;
+  }
+
+  .fourth-right {
+    width: 50%;
+  }
+
+  .fifth {
+    display: flex;
+    text-align: left;
+    margin-top: 10%;
+    position: relative;
+  }
+
+  .fifth-left {
+    width: 60%;
+  }
+
+  .fifth-right {
+    width: 40%;
+  }
+
+  .sixth {
+    display: flex;
+    text-align: left;
+    margin-top: 10%;
+  }
+
+  .second-right {
+    position: relative;
+    z-index: -1;
+  }
+
+  .second-right img {
+    position: relative;
+  }
+
+  .play {
+    position: absolute;
+    top: 40%;
+    left: 34%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  .fourth-left-detail {
+    margin: 10% 10% 15% 16%;
+  }
+
+  .third-right-details {
+    margin: 12% 10% 15% 10%;
+  }
+
+  .fifth-details {
+    margin: 10% 15% 15% 14%;
+  }
+
+  .six-details {
+    background-color: #f3eff9;
+    width: 50%;
+    border-radius: 0px 32px 32px 0px;
+  }
+
+  .six-images {
+    width: 50%;
+    display: flex;
+    /* justify-content: space-around; */
+    text-align: center;
+  }
+
+  .six-details h2 {
+    color: #9453ff;
+  }
+
+  .six-details p {
+    color: #9387a8;
+  }
+
+  .i21,
+  .i22,
+  .i23 {
+    margin-top: 20%;
+  }
+
+  .i12 {
+    margin-top: 50%;
+    margin-left: 40%;
+  }
+
+  .i21 {
+    margin-left: 20%;
+  }
+
+  .i11 {
+    margin-left: 40%;
+  }
+
+  .i22 {
+    margin-left: 16%;
+  }
+
+  .i13 {
+    margin-left: 20%;
+  }
+  .i23 {
+    margin-left: 40%;
+  }
+
+  .six-details-contents {
+    margin: 20% 15% 20% 40%;
+  }
+
+  .chambi {
+    position: absolute;
+    top: 51%;
+    left: 11%;
+    z-index: -1;
+  }
+
+  .second {
+    position: relative;
+  }
+
+  .may {
+    position: absolute;
+    top: -35%;
+  }
+
+  .van {
+    position: absolute;
+    top: -25%;
+  }
+  .tamgiac {
+    position: absolute;
+    left: 15%;
+  }
+
+  .nuahinhtron {
+    position: absolute;
+    top: 40%;
+  }
+
+  .may2 {
+    position: absolute;
+    right: 0%;
+    top: -55%;
+    z-index: -2;
+  }
+
+  .van2 {
+    position: absolute;
+    right: 0%;
+    top: -40%;
+    z-index: -2;
+  }
+
+  .chambi2 {
+    position: absolute;
+    left: 72%;
+    bottom: -7%;
+    z-index: -1;
+  }
+
+  .van41 {
+    position: absolute;
+    top: -28%;
+    left: 0%;
+    z-index: 1;
+  }
+
+  .tamgiac41 {
+    position: absolute;
+    bottom: -25%;
+    left: 40%;
+  }
+
+  .van52 {
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    z-index: 2;
+  }
 }
