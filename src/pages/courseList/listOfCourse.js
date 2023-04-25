@@ -2,10 +2,12 @@ import "./courseList.css";
 import khoahoc from "../../images/CourseList/khoahoc.png";
 import heart from "../../images/CourseList/heart.png";
 import data from "../../fakeAPI/data.json";
+import UseLogicCourseList from "./useLogicCourseList";
 export default function ListOfCourse() {
+  const { listCourse } = UseLogicCourseList();
   return (
     <div className="listCourse">
-      {data.map((e) => (
+      {listCourse.map((e) => (
         <div className="list" key={e.id}>
           <div className="listCourseTitle">
             <img src={khoahoc} alt="khoahoc"></img>

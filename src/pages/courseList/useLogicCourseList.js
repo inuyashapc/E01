@@ -1,14 +1,19 @@
-import data from "../../fakeAPI/data.json";
+import { useState } from "react";
+import fakeData from "../../fakeAPI/data.json";
+let a = [];
 export default function UseLogicCourseList() {
+  const [listCourse, setListCourse] = useState(fakeData);
   const handleSearch = (e) => {
     let name = e.target.value;
-    const listCourse = data.filter((e) =>
+    a = listCourse.filter((e) =>
       e.name.toLowerCase().includes(name.toLowerCase())
     );
-    console.log(listCourse);
-    return listCourse;
+    console.log("abcd=>", a);
+    setListCourse(a);
   };
-  return{
-    handleSearch
-  }
+  console.log("aaaaaaaaa=>", listCourse);
+  return {
+    handleSearch,
+    listCourse,
+  };
 }

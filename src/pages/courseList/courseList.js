@@ -6,19 +6,9 @@ import ListOfCourse from "./listOfCourse";
 import TitleOfCourseList from "./titleOfCourseList";
 import Footer from "../footer/footer";
 import PaginationOfCourse from "./paginationOfCourse";
-import data from "../../fakeAPI/data.json";
 import UseLogicCourseList from "./useLogicCourseList";
 export default function CourseList() {
-  const handleSearch = (e) => {
-    let name = e.target.value;
-    const listCourse = data.filter((e) =>
-      e.name.toLowerCase().includes(name.toLowerCase())
-    );
-    console.log(listCourse);
-    return listCourse;
-  };
-  var { handleSearchs } = UseLogicCourseList;
-
+  const { handleSearch } = UseLogicCourseList();
   return (
     <div className="courseList">
       <Navbar />
