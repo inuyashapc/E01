@@ -8,7 +8,8 @@ import Footer from "../footer/footer";
 import PaginationOfCourse from "./paginationOfCourse";
 import UseLogicCourseList from "./useLogicCourseList";
 export default function CourseList() {
-  const { handleSearch } = UseLogicCourseList();
+  const { handleSearch, listCourse, handleFilterSkills, handleFilterLevels } =
+    UseLogicCourseList();
   return (
     <div className="courseList">
       <Navbar />
@@ -23,11 +24,11 @@ export default function CourseList() {
             onChange={handleSearch}
           />
           <div className="skillsAndLevels">
-            <FilterSkill />
-            <FilterLevel />
+            <FilterSkill handleFilterSkills={handleFilterSkills} />
+            <FilterLevel handleFilterLevels={handleFilterLevels} />
           </div>
         </div>
-        <ListOfCourse />
+        <ListOfCourse listCourse={listCourse} />
       </div>
       <PaginationOfCourse />
       <Footer />

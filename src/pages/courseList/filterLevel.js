@@ -1,23 +1,43 @@
 import "./courseList.css";
-export default function FilterLevel() {
+export default function FilterLevel({ handleFilterLevels }) {
   return (
     <div className="levelAll">
       <h3>Levels</h3>
       <div className="skill">
         <div className="skills">
-          <input type="checkbox" />
-          <p>All skills</p>
+          <input
+            name="All levels"
+            type="checkbox"
+            value="All levels"
+            onChange={handleFilterLevels}
+          />
+          <p>All levels</p>
         </div>
         <div className="skills">
-          <input type="checkbox" />
+          <input
+            name="Beginner"
+            type="checkbox"
+            value="Beginner"
+            onChange={handleFilterLevels}
+          />
           <p>Beginner</p>
         </div>
         <div className="skills">
-          <input type="checkbox" />
+          <input
+            name="Intermediate"
+            type="checkbox"
+            value="Intermediate"
+            onChange={handleFilterLevels}
+          />
           <p>Intermediate</p>
         </div>
         <div className="skills">
-          <input type="checkbox" />
+          <input
+            name="Advanced"
+            type="checkbox"
+            value="Advanced"
+            onChange={handleFilterLevels}
+          />
           <p>Advanced</p>
         </div>
       </div>

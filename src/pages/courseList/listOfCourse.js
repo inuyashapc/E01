@@ -3,8 +3,7 @@ import khoahoc from "../../images/CourseList/khoahoc.png";
 import heart from "../../images/CourseList/heart.png";
 import data from "../../fakeAPI/data.json";
 import UseLogicCourseList from "./useLogicCourseList";
-export default function ListOfCourse() {
-  const { listCourse } = UseLogicCourseList();
+export default function ListOfCourse({ listCourse }) {
   return (
     <div className="listCourse">
       {listCourse.map((e) => (
