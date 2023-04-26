@@ -8,8 +8,19 @@ import Footer from "../footer/footer";
 import PaginationOfCourse from "./paginationOfCourse";
 import UseLogicCourseList from "./useLogicCourseList";
 export default function CourseList() {
-  const { handleSearch, listCourse, handleFilterSkills, handleFilterLevels } =
-    UseLogicCourseList();
+  const {
+    handleSearch,
+    listCourse,
+    handleFilterSkills,
+    handleFilterLevels,
+    fakeData,
+    numberPerPage,
+    currentPost,
+    setCurrentPage,
+    currentPage,
+    debounce,
+    optimised
+  } = UseLogicCourseList();
   return (
     <div className="courseList">
       <Navbar />
@@ -21,16 +32,21 @@ export default function CourseList() {
             name="search"
             type="search"
             placeholder="Search Course"
-            onChange={handleSearch}
+            onChange={optimised}
           />
           <div className="skillsAndLevels">
             <FilterSkill handleFilterSkills={handleFilterSkills} />
             <FilterLevel handleFilterLevels={handleFilterLevels} />
           </div>
         </div>
-        <ListOfCourse listCourse={listCourse} />
+        <ListOfCourse listCourse={currentPost} />
       </div>
-      <PaginationOfCourse />
+      <PaginationOfCourse
+        totalPosts={listCourse.length}
+        numberPerPage={numberPerPage}
+        setCurrentPage={setCurrentPage}
+        currentPage={currentPage}
+      />
       <Footer />
     </div>
   );

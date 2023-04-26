@@ -1,5 +1,9 @@
 import "./courseList.css";
 export default function FilterSkill({ handleFilterSkills }) {
+  // const aaaaaaaa = (event) =>{
+  //   console.log("e", event.target.checked);
+  // }
+
   return (
     <div className="skillAll">
       <h3>Skills</h3>
@@ -11,6 +15,10 @@ export default function FilterSkill({ handleFilterSkills }) {
             value="Speaking"
             onChange={handleFilterSkills}
           />
+          {/* <input
+            type="checkbox"
+            onChange={aaaaaaaa}
+          /> */}
           <p>Speaking</p>
         </div>
         <div className="skills">
