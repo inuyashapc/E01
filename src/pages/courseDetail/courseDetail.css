@@ -138,6 +138,9 @@
   display: flex;
   margin-top: 16px;
 }
+.materialIncludesDetails img {
+  margin-right: 7.04px;
+}
 .addToCart button {
   color: #ffffff;
   background-color: #9453ff;
@@ -151,6 +154,7 @@
   border: none;
   border-radius: 4px;
   margin-top: 40px;
+  cursor: pointer;
 }
 .buyNow {
   display: flex;
@@ -169,6 +173,10 @@
   font-size: 20px;
   line-height: 28px;
   margin-right: 16px;
+  cursor: pointer;
+}
+.buyNow img{
+  cursor: pointer;
 }
 .categories {
   margin: 40px 28px 0 28px;
@@ -317,6 +325,7 @@
   background: #f2ebfd;
   border-radius: 4px;
   margin-right: 24px;
+  cursor: pointer;
 }
 .preview p {
   width: 36px;
