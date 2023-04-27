@@ -47,7 +47,7 @@ export default function UseLogicCourseList() {
   const handleSearch = (e) => {
     let name = e.target.value;
     console.log(name);
-    a = fakeData.filter((e) =>
+    const a = fakeData.filter((e) =>
       e.name.toLowerCase().includes(name.toLowerCase())
     );
     console.log("abcd=>", a);

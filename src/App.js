@@ -6,6 +6,7 @@ import AboutUs from "./pages/aboutUs/AboutUs";
 import "./App.css";
 import HomePage from "./pages/home/homePage";
 import CourseList from "./pages/courseList/courseList";
+import CourseDetail from "./pages/courseDetail/courseDetail";
 //<LoginPage /> nó là react element
 //LoginPage là react component
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/aboutUs" element={<AboutUs />} />
         <Route path="/courseList" element={<CourseList />} />
+        <Route path="/courseDetail" element={<CourseDetail />} />
       </Routes>
     </div>
   );
