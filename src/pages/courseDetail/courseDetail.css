@@ -115,6 +115,7 @@
   background-color: #ffffff;
   box-shadow: -4px 8px 16px rgba(20, 11, 37, 0.2);
   border-radius: 8px;
+  height: fit-content;
 }
 .materialIncludes {
   margin-top: 16px;
@@ -368,4 +369,50 @@
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 4px;
+}
+.studentFeedback {
+  margin-top: 40px;
+  margin-right: 40px;
+}
+.studentFeedback h5 {
+  color: #362355;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.studentInfo {
+  display: flex;
+  margin-bottom: 16px;
+}
+.studentInfoDetail {
+  margin-left: 12px;
+}
+.studentInfoDetail h6 {
+  color: #362355;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.studentInfoDetail p {
+  color: #9387a8;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.listOfStudentInfo {
+  margin-top: 24px;
+  border-bottom: 1px solid #cac1d8;
+}
+.listOfStudentInfo p {
+  color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+}
+.feedbackOfStudent {
+  margin-bottom: 24px;
 }
