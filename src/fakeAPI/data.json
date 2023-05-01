@@ -4,7 +4,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -12,7 +12,7 @@
         "name": "Kiến Thức Nhập Môn IT",
         "img": "",
         "skill": "Listening",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -20,7 +20,7 @@
         "name": "Xây Dựng Website với ReactJS",
         "img": "",
         "skill": "Reading",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -28,7 +28,7 @@
         "name": "Lập Trình JavaScript Cơ Bản",
         "img": "",
         "skill": "Writing",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -36,7 +36,7 @@
         "name": "HTML CSS Pro",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -44,7 +44,7 @@
         "name": "JavaScript Pro",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -52,7 +52,7 @@
         "name": "ReactJS Pro",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -60,7 +60,7 @@
         "name": "HTML CSS từ Zero đến Hero",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -68,7 +68,7 @@
         "name": "Responsive Với Grid System",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -76,7 +76,7 @@
         "name": "Lập Trình JavaScript Cơ Bản",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -84,7 +84,7 @@
         "name": "Lập Trình JavaScript Nâng Cao",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -92,7 +92,7 @@
         "name": "Làm việc với Terminal & Ubuntu",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 22.00
     },
     {
@@ -100,7 +100,7 @@
         "name": "Xây Dựng Website với ReactJS",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -108,7 +108,7 @@
         "name": "Node & ExpressJS",
         "img": "",
         "skill": "Listening",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -116,7 +116,7 @@
         "name": "App \"Đừng Chạm Tay Lên Mặt\"",
         "img": "",
         "skill": "Reading",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -124,7 +124,7 @@
         "name": "Lập Trình JavaScript Cơ Bản",
         "img": "",
         "skill": "Writing",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -132,7 +132,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -140,7 +140,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -148,7 +148,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -156,7 +156,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -164,7 +164,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -172,7 +172,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -180,7 +180,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 20.00
     },
     {
@@ -188,7 +188,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "All levels",
+        "level": "allLevels",
         "price": 22.00
     }
 ]

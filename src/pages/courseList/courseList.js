@@ -19,7 +19,8 @@ export default function CourseList() {
     setCurrentPage,
     currentPage,
     debounce,
-    optimised
+    optimised,
+    skills,
   } = UseLogicCourseList();
   return (
     <div className="courseList">
@@ -35,7 +36,10 @@ export default function CourseList() {
             onChange={optimised}
           />
           <div className="skillsAndLevels">
-            <FilterSkill handleFilterSkills={handleFilterSkills} />
+            <FilterSkill
+              handleFilterSkills={handleFilterSkills}
+              skills={skills}
+            />
             <FilterLevel handleFilterLevels={handleFilterLevels} />
           </div>
         </div>
