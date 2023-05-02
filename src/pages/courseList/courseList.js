@@ -21,6 +21,7 @@ export default function CourseList() {
     debounce,
     optimised,
     skills,
+    levels,
   } = UseLogicCourseList();
   return (
     <div className="courseList">
@@ -40,7 +41,10 @@ export default function CourseList() {
               handleFilterSkills={handleFilterSkills}
               skills={skills}
             />
-            <FilterLevel handleFilterLevels={handleFilterLevels} />
+            <FilterLevel
+              handleFilterLevels={handleFilterLevels}
+              levels={levels}
+            />
           </div>
         </div>
         <ListOfCourse listCourse={currentPost} />

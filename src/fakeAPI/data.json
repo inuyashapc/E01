@@ -4,7 +4,7 @@
         "name": "Master Your Pronounciation Course",
         "img": "",
         "skill": "Speaking",
-        "level": "allLevels",
+        "level": "Beginner",
         "price": 20.00
     },
     {
@@ -20,7 +20,7 @@
         "name": "Xây Dựng Website với ReactJS",
         "img": "",
         "skill": "Reading",
-        "level": "allLevels",
+        "level": "Intermediate",
         "price": 20.00
     },
     {
@@ -28,7 +28,7 @@
         "name": "Lập Trình JavaScript Cơ Bản",
         "img": "",
         "skill": "Writing",
-        "level": "allLevels",
+        "level": "Advanced",
         "price": 20.00
     },
     {

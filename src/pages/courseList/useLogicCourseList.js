@@ -9,7 +9,7 @@ export default function UseLogicCourseList() {
     Listening: false,
     Reading: false,
     Writing: false,
-    AllLevels: false,
+    allLevels: false,
     Beginner: false,
     Intermediate: false,
     Advanced: false,
@@ -34,6 +34,11 @@ export default function UseLogicCourseList() {
       // { checked: false }
     ),
   ]);
+  const [levels, setLevels] = useState([
+    ...fakeData.filter((item, index) => {
+      return index === fakeData.findIndex((t) => t.level === item.level);
+    }),
+  ]);
   const handleFilterSkills = (e) => {
     console.log("aaaaaaaaaaaa", e);
     const { name, checked } = e.target;
@@ -53,7 +58,20 @@ export default function UseLogicCourseList() {
     // console.log(listSkills);
     // setListCourse(listSkills);
   };
-
+  const handleFilterLevels = (e) => {
+    console.log("aaaaaabbbbbbb", e);
+    const { name, checked } = e.target;
+    console.log("checked", checked);
+    setFilter((prev) => {
+      return { ...prev, [name]: checked };
+    });
+    console.log("filter level", filter);
+    // const levelValue = e.target.value;
+    // console.log(levelValue);
+    // const listLevels = fakeData.filter((e) => e.level === levelValue);
+    // console.log(listLevels);
+    // setListCourse(listLevels);
+  };
   useEffect(() => {
     let isFilter = false;
 
@@ -77,27 +95,21 @@ export default function UseLogicCourseList() {
         isFilter = true;
         return true;
       }
-
-      if (
-        (filter?.AllLevels || filter?.Beginner) &&
-        (item?.level === "Beginner" || item?.level === "allLevels")
-      ) {
+      if (filter?.allLevels) {
+        isFilter = true;
+        return true;
+      }
+      if (filter?.Beginner && item?.level === "Beginner") {
         isFilter = true;
         return true;
       }
 
-      if (
-        (filter?.AllLevels || filter?.Intermediate) &&
-        (item?.level === "Intermediate" || item?.level === "allLevels")
-      ) {
+      if (filter?.Intermediate && item?.level === "Intermediate") {
         isFilter = true;
         return true;
       }
 
-      if (
-        (filter?.AllLevels||filter?.Advanced) &&
-        (item?.level === "Advanced" || item?.level === "allLevels")
-      ) {
+      if (filter?.Advanced && item?.level === "Advanced") {
         isFilter = true;
         return true;
       }
@@ -133,14 +145,6 @@ export default function UseLogicCourseList() {
 
   const optimised = useCallback(debounce(handleSearch), []);
 
-  const handleFilterLevels = (e) => {
-    const levelValue = e.target.value;
-    console.log(levelValue);
-    const listLevels = fakeData.filter((e) => e.level === levelValue);
-    console.log(listLevels);
-    setListCourse(listLevels);
-  };
-
   return {
     handleSearch,
     listCourse,
@@ -154,5 +158,6 @@ export default function UseLogicCourseList() {
     debounce,
     optimised,
     skills,
+    levels,
   };
 }
