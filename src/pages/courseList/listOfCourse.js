@@ -9,7 +9,7 @@ import { cartList } from "../redux/selector";
 export default function ListOfCourse({ listCourse }) {
   const dispatch = useDispatch();
   const cart = useSelector(cartList); // no la 1 function de lay tung du lieu trong 1 kho chung
-  console.log("aaaaaaa", { cart });
+  // console.log("aaaaaaa", { cart });
   const handleAddToCart = (e) => {
     console.log(e.id);
     dispatch(
