@@ -16,8 +16,7 @@
 .profileDetails {
   width: 411px;
   height: 724px;
-  margin: auto;
-  margin-top: 24px;
+  margin: 0 auto;
   padding: 0 40px;
   background-color: #ffffff;
 }
@@ -127,8 +126,8 @@
 }
 .processCourse {
   /* width: 75%; */
-  width: 845px;
-  height: 721px;
+  /* width: 845px;
+  height: 721px; */
   background-color: #ffffff;
   margin-left: 24px;
 }
@@ -152,11 +151,13 @@
   width: 152px;
   height: 42px;
   background-color: #ffffff;
-  border-width: 1px 1px 0px 1px;
+  border-width: 1px 1px 1px 1px;
   border-style: solid;
   border-color: #9453ff;
   border-radius: 4px 4px 0px 0px;
   margin-right: 4px;
+  /* max-height: 42px; */
+  height: 42px;
 }
 .tabNavbar {
   cursor: pointer;
@@ -167,6 +168,8 @@
   border-color: #dbdbdb;
   border-radius: 4px 4px 0px 0px;
   margin-right: 4px;
+  max-height: 37px;
+  border-bottom: 1px solid #dbdbdb;
 }
 .courseDetail {
   display: none;

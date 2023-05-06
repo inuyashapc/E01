@@ -24,7 +24,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navbar-right">
-          <img src={cart} alt="cart"></img>
+          <Link to="/cart">
+            <img src={cart} alt="cart"></img>
+          </Link>
           <Link to="/">
             <button id="btn-left">Sign in</button>
           </Link>

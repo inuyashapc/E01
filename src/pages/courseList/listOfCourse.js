@@ -3,7 +3,23 @@ import khoahoc from "../../images/CourseList/khoahoc.png";
 import heart from "../../images/CourseList/heart.png";
 import data from "../../fakeAPI/data.json";
 import UseLogicCourseList from "./useLogicCourseList";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../redux/actions";
+import { cartList } from "../redux/selector";
 export default function ListOfCourse({ listCourse }) {
+  const dispatch = useDispatch();
+  const cart = useSelector(cartList); // no la 1 function de lay tung du lieu trong 1 kho chung
+  console.log("aaaaaaa", { cart });
+  const handleAddToCart = (e) => {
+    console.log(e.id);
+    dispatch(
+      addToCart({
+        id: e.id,
+        name: e.name,
+        price: e.price,
+      })
+    );
+  };
   return (
     <div className="listCourse">
       {listCourse.map((e) => (
@@ -17,7 +33,7 @@ export default function ListOfCourse({ listCourse }) {
               <h1>${e.price}</h1>
             </div>
             <div className="cart">
-              <button>Add To Cart</button>
+              <button onClick={() => handleAddToCart(e)}>Add To Cart</button>
               <img src={heart} alt="heart"></img>
             </div>
           </div>

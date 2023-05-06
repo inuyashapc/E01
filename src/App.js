@@ -8,6 +8,7 @@ import HomePage from "./pages/home/homePage";
 import CourseList from "./pages/courseList/courseList";
 import CourseDetail from "./pages/courseDetail/courseDetail";
 import ProfilePage from "./pages/profile/profilePage";
+import CartPage from "./pages/cart/cartPage";
 //<LoginPage /> nó là react element
 //LoginPage là react component
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/courseList" element={<CourseList />} />
         <Route path="/courseDetail" element={<CourseDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
     </div>
   );

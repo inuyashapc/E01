@@ -11,6 +11,7 @@ import process from "../../images/Profile/process.png";
 import "./profilePage.css";
 import { useState } from "react";
 import Footer from "../footer/footer";
+import Password from "./password";
 function ProfilePage() {
   const [toggle, setToggle] = useState(1);
   const updateToggle = (id) => {
@@ -71,16 +72,28 @@ function ProfilePage() {
         </div>
         <div className="processCourse">
           <div className="processCourseNavbar">
-            <div className={toggle===1 ? "activeTabNavbar":"tabNavbar"} onClick={() => updateToggle(1)}>
+            <div
+              className={toggle === 1 ? "activeTabNavbar" : "tabNavbar"}
+              onClick={() => updateToggle(1)}
+            >
               <p>My Learning Journey</p>
             </div>
-            <div className={toggle===2 ? "activeTabNavbar":"tabNavbar"} onClick={() => updateToggle(2)}>
+            <div
+              className={toggle === 2 ? "activeTabNavbar" : "tabNavbar"}
+              onClick={() => updateToggle(2)}
+            >
               <p>Password</p>
             </div>
-            <div className={toggle===3 ? "activeTabNavbar":"tabNavbar"} onClick={() => updateToggle(3)}>
+            <div
+              className={toggle === 3 ? "activeTabNavbar" : "tabNavbar"}
+              onClick={() => updateToggle(3)}
+            >
               <p>Billing & Purchases</p>
             </div>
-            <div className={toggle===4 ? "activeTabNavbar":"tabNavbar"} onClick={() => updateToggle(4)}>
+            <div
+              className={toggle === 4 ? "activeTabNavbar" : "tabNavbar"}
+              onClick={() => updateToggle(4)}
+            >
               <p>Whishlist</p>
             </div>
           </div>
@@ -142,6 +155,9 @@ function ProfilePage() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className={toggle === 2 ? "show_courseDetail" : "courseDetail"}>
+            <Password />
           </div>
         </div>
       </div>
