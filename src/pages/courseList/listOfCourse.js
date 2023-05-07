@@ -6,6 +6,7 @@ import UseLogicCourseList from "./useLogicCourseList";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux/actions";
 import { cartList } from "../redux/selector";
+import { Link, Navigate, useParams } from "react-router-dom";
 export default function ListOfCourse({ listCourse }) {
   const dispatch = useDispatch();
   const cart = useSelector(cartList); // no la 1 function de lay tung du lieu trong 1 kho chung
@@ -29,7 +30,9 @@ export default function ListOfCourse({ listCourse }) {
             <div className="listButton">
               <button>All Levels</button>
               <button>Speaking Skills</button>
-              <h3>{e.name}</h3>
+              <h3>
+                <Link to={`/courseDetail/${e.id}`} id="linh">{e.name}</Link>
+              </h3>
               <h1>${e.price}</h1>
             </div>
             <div className="cart">

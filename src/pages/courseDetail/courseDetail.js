@@ -9,8 +9,13 @@ import LearningAndSkills from "./learningAndSkills";
 import VideoTimetables from "./videoTimetables";
 import Instructor from "./instructor";
 import StudentFeedback from "./studentFeedback";
-
+import { useParams } from "react-router-dom";
+import fakeDate from "../../fakeAPI/data.json";
 export default function CourseDetail() {
+  const { id } = useParams();
+  console.log(id);
+  const course = fakeDate.find((data) => data.id == id);
+  console.log(course);
   return (
     <div>
       <Navbar />
@@ -21,7 +26,7 @@ export default function CourseDetail() {
         <div className="details">
           <div className="details-title">
             <p>Course Category</p>
-            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h2>{course.name}</h2>
             <p>Last update December 1, 2022</p>
             <div className="avt-name">
               <img src={avt} alt="avt"></img>

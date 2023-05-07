@@ -13,7 +13,7 @@ export default function Navbar() {
             <Link to="/#">Level Test</Link>
           </div>
           <div className="learningResources">
-            <Link to="/#">Courses</Link>
+            <Link to="/courseList">Courses</Link>
           </div>
           <div className="learningResources">
             <Link to="/#">Learning Resources</Link>

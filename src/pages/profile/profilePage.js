@@ -44,6 +44,7 @@ function ProfilePage() {
               <img src={account} alt="account"></img>
               <div className="UserInfoDetails">
                 <p>Họ và tên</p>
+                <input type="text" value="Tran Van Nhan"/>
                 <h6>Tran Van Nhan</h6>
               </div>
             </div>
@@ -52,6 +53,7 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Số điện thoại</p>
                 <h6>0960 123 456</h6>
+                <input type="text" value="Tran Van Nhan"/>
               </div>
             </div>
             <div className="userInfomationDetails">
@@ -59,6 +61,7 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Ngày sinh</p>
                 <h6>04/05/1996</h6>
+                <input type="text" value="Tran Van Nhan"/>
               </div>
             </div>
             <div className="userInfomationDetails">
@@ -66,6 +69,7 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Email</p>
                 <h6>huongnt@gmail.com</h6>
+                <input type="text" value="Tran Van Nhan"/>
               </div>
             </div>
           </div>

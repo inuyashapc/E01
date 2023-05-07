@@ -80,6 +80,15 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  cursor: pointer;
+}
+.editUser p:hover {
+  color: #9453ff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
 }
 
 .editUser img {
@@ -116,7 +125,13 @@
   font-size: 20px;
   line-height: 28px;
 }
-
+.userInfomationDetails input {
+  color: #281c42;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
 .userInfomation {
   margin-top: 32px;
 }

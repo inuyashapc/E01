@@ -4,8 +4,21 @@ import style from "../cart/cartPage.module.css";
 import imgCourse from "../../images/Cart/imgCourse.png";
 import { useDispatch, useSelector } from "react-redux";
 import { cartList } from "../redux/selector";
+import { removeFromCart } from "../redux/actions";
 function CartPage() {
+  const dispatch = useDispatch();
+  const handleRemove = (course) => {
+    console.log(course);
+    dispatch(
+      removeFromCart({
+        id: course.id,
+      })
+    );
+  };
   const cart = useSelector(cartList); // no la 1 function de lay tung du lieu trong 1 kho chung
+  let total = 0;
+  cart.map((e) => (total += e.price));
+  const discount = 20
   return (
     <div>
       <Navbar />
@@ -17,7 +30,7 @@ function CartPage() {
           <div className={style.yourCart}>
             <h5>Your Cart</h5>
             {cart.map((course) => (
-              <div className={style.courses}>
+              <div key={course.id} className={style.courses}>
                 <div className={style.course}>
                   <img src={imgCourse} alt="imgCourse"></img>
                   <div className={style.courseDetail}>
@@ -29,7 +42,9 @@ function CartPage() {
                     <h6>$20.00</h6>
                     <p>$84.99</p>
                   </div>
-                  <p>Remove</p>
+                  <div className={style.remove}>
+                    <p onClick={() => handleRemove(course)}>Remove</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -48,17 +63,17 @@ function CartPage() {
             <div className={style.couponDetail}>
               <div className={style.price}>
                 <p>Orginal Price</p>
-                <h6>$60.00</h6>
+                <h6>${total}</h6>
               </div>
               <div className={style.discountDiv}>
                 <div className={style.discount}>
                   <p>Discount</p>
-                  <h6>-$20$.00</h6>
+                  <h6>-${discount}</h6>
                 </div>
               </div>
               <div className={style.total}>
                 <p>Total</p>
-                <h6>$40.00</h6>
+                <h6>${total-discount}</h6>
               </div>
               <div className={style.checkout}>
                 <button>Check Out</button>

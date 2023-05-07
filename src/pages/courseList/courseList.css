@@ -65,6 +65,7 @@
   width: 167px;
   height: 40px;
   border-radius: 4px;
+  cursor: pointer;
 }
 .listCourseTitle {
   text-align: left;
@@ -98,11 +99,22 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
+#linh {
+  color: #362355;
+}
 .listButton h3 {
   margin-top: 4px;
   margin-bottom: 4px;
   width: 268px;
   height: 48px;
+}
+.listButton h3:hover {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 268px;
+  height: 48px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .listButton h1 {
   margin-bottom: 24px;
