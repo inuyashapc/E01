@@ -1,7 +1,7 @@
 import Navbar from "../navbar/navbar";
 import avt from "../../images/Profile/avt.png";
 import upload from "../../images/Profile/upload.png";
-import edit from "../../images/Profile/edit.png";
+import editImg from "../../images/Profile/edit.png";
 import account from "../../images/Profile/account.png";
 import call from "../../images/Profile/call.png";
 import email from "../../images/Profile/email.png";
@@ -14,10 +14,35 @@ import Footer from "../footer/footer";
 import Password from "./password";
 function ProfilePage() {
   const [toggle, setToggle] = useState(1);
+  const [edit, setEdit] = useState(false);
+  const [profile, setProfile] = useState({
+    name: "Tran Van Nhan",
+    phone: "0960 123 456",
+    birthday: "04/05/1996",
+    email: "huongnt@gmail.com",
+  });
   const updateToggle = (id) => {
     setToggle(id);
     console.log(id);
   };
+  const handleEdit = () => {
+    setEdit(!edit);
+  };
+  const handleChange = (e) => {
+    console.log(e);
+    const { name, value } = e.target;
+    setProfile((preProfile) => {
+      return {
+        ...preProfile,
+        [name]: value,
+      };
+    });
+    console.log(profile.name);
+  };
+  // const handleChange = (e) => {
+  //   setProfile({ name: e.target.value,
+  //     phone: e.target.value });
+  // };
   return (
     <div className="profile">
       <Navbar />
@@ -36,40 +61,74 @@ function ProfilePage() {
             <div className="userInfomations">
               <p>User Infomation</p>
               <div className="editUser">
-                <img src={edit} alt="edit"></img>
-                <p>Edit</p>
+                <img src={editImg} alt="edit"></img>
+                <p onClick={() => handleEdit()}>Edit</p>
               </div>
             </div>
             <div className="userInfomationDetails">
               <img src={account} alt="account"></img>
               <div className="UserInfoDetails">
                 <p>Họ và tên</p>
-                <input type="text" value="Tran Van Nhan"/>
-                <h6>Tran Van Nhan</h6>
+                {edit === true ? (
+                  <input
+                    type="text"
+                    name="name"
+                    defaultValue={profile.name}
+                    // value={profile.name}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  // <h6>a</h6>
+                  <h6>{profile.name}</h6>
+                )}
               </div>
             </div>
             <div className="userInfomationDetails">
               <img src={call} alt="call"></img>
               <div className="UserInfoDetails">
                 <p>Số điện thoại</p>
-                <h6>0960 123 456</h6>
-                <input type="text" value="Tran Van Nhan"/>
+                {edit === true ? (
+                  <input
+                    name="phone"
+                    type="text"
+                    onChange={handleChange}
+                    defaultValue={profile.phone}
+                  />
+                ) : (
+                  <h6>{profile.phone}</h6>
+                )}
               </div>
             </div>
             <div className="userInfomationDetails">
               <img src={birthday} alt="birthday"></img>
               <div className="UserInfoDetails">
                 <p>Ngày sinh</p>
-                <h6>04/05/1996</h6>
-                <input type="text" value="Tran Van Nhan"/>
+                {edit === true ? (
+                  <input
+                    name="birthday"
+                    type="date"
+                    defaultValue={profile.birthday}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  <h6>{profile.birthday}</h6>
+                )}
               </div>
             </div>
             <div className="userInfomationDetails">
               <img src={email} alt="email"></img>
               <div className="UserInfoDetails">
                 <p>Email</p>
-                <h6>huongnt@gmail.com</h6>
-                <input type="text" value="Tran Van Nhan"/>
+                {edit === true ? (
+                  <input
+                    name="email"
+                    type="email"
+                    defaultValue={profile.email}
+                    onChange={handleChange}
+                  />
+                ) : (
+                  <h6>{profile.email}</h6>
+                )}
               </div>
             </div>
           </div>
