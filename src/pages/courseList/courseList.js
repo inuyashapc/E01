@@ -7,6 +7,7 @@ import TitleOfCourseList from "./titleOfCourseList";
 import Footer from "../footer/footer";
 import PaginationOfCourse from "./paginationOfCourse";
 import UseLogicCourseList from "./useLogicCourseList";
+import filterImg from "../../images/CourseList/Mobile/filter.png";
 export default function CourseList() {
   const {
     handleSearch,
@@ -47,7 +48,25 @@ export default function CourseList() {
             />
           </div>
         </div>
-        <ListOfCourse listCourse={currentPost} />
+        <div className="mobile">
+          <div className="listMobile">
+            <div className="categoryOfCourseMobile">
+              <input
+                id="search"
+                name="search"
+                type="search"
+                placeholder="Search Course"
+                onChange={optimised}
+              />
+              <img src={filterImg} alt="filterImg"></img>
+            </div>
+            <ListOfCourse listCourse={currentPost} />
+          </div>
+        </div>
+
+        <div className="listPC">
+          <ListOfCourse listCourse={currentPost} />
+        </div>
       </div>
       <PaginationOfCourse
         totalPosts={listCourse.length}

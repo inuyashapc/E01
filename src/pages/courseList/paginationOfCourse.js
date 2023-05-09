@@ -14,7 +14,7 @@ export default function PaginationOfCourse({
   return (
     <div className="pagination">
       <a>
-        <img src={trai}></img>
+        <img src={trai} alt="trai"></img>
       </a>
       {pages.map((page, index) => {
         return (
@@ -28,7 +28,7 @@ export default function PaginationOfCourse({
         );
       })}
       <a>
-        <img src={phai}></img>
+        <img src={phai} alt="phai"></img>
       </a>
     </div>
   );

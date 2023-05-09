@@ -13,24 +13,26 @@ export default function Footer() {
           <img src={bg} alt="footer"></img>
         </div>
       </div>
-      <div id="logo">
-        <img src={logo} alt="footer"></img>
-      </div>
-      <div className="category">
-        <a href="#">Home</a>
-        <a href="#">Level Test</a>
-        <a href="#">Courses</a>
-        <a href="#">Learning Resources</a>
-        <a href="#">About us</a>
-      </div>
-      <div className="social-media">
-        <img src={fb} alt="footer"></img>
-        <img src={ig} alt="footer"></img>
-        <img src={yt} alt="footer"></img>
-        <img src={tiktok} alt="footer"></img>
-      </div>
       <div className="title">
-        <p>©2022 Levion. All copyrights reserved</p>
+        <div id="logo">
+          <img src={logo} alt="footer"></img>
+        </div>
+        <div className="category">
+          <a href="#">Home</a>
+          <a href="#">Level Test</a>
+          <a href="#">Courses</a>
+          <a href="#">Learning Resources</a>
+          <a href="#">About us</a>
+        </div>
+        <div className="social-media">
+          <img src={fb} alt="footer"></img>
+          <img src={ig} alt="footer"></img>
+          <img src={yt} alt="footer"></img>
+          <img src={tiktok} alt="footer"></img>
+        </div>
+        <div className="title">
+          <p>©2022 Levion. All copyrights reserved</p>
+        </div>
       </div>
     </>
   );

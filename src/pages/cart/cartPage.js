@@ -2,6 +2,7 @@ import Navbar from "../navbar/navbar";
 import Footer from "../footer/footer";
 import style from "../cart/cartPage.module.css";
 import imgCourse from "../../images/Cart/imgCourse.png";
+import imgCourseMobile from "../../images/Cart/Mobile/imgCourse.png";
 import { useDispatch, useSelector } from "react-redux";
 import { cartList } from "../redux/selector";
 import { removeFromCart } from "../redux/actions";
@@ -53,17 +54,48 @@ function CartPage() {
                 </div>
               ))}
             </div>
+            <div className={style.yourCartMobile}>
+              <h5>Your Cart</h5>
+              {cart.map((course) => (
+                <div key={course.id} className={style.courseDiv}>
+                  <div className={style.courses}>
+                    <div className={style.course}>
+                      <img src={imgCourseMobile} alt="imgCourse"></img>
+                      <div className={style.listCourse}>
+                        <div className={style.courseDetail}>
+                          <h6>{course.name}</h6>
+                          <div className={style.category}>
+                            <button>All Levels</button>
+                            <button>Speaking Skill</button>
+                          </div>
+                        </div>
+                        <div className={style.fee}>
+                          <h6>$20.00</h6>
+                          <p>$84.99</p>
+                        </div>
+                        <div className={style.remove}>
+                          <p onClick={() => handleRemove(course)}>Remove</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
             <div className={style.coupon}>
-              <div className={style.couponDiscount}>
-                <h5>Coupon Discount</h5>
-                <div className={style.couponCode}>
-                  <label>Couple Code</label>
-                  <div className={style.couponApply}>
-                    <input type="search" placeholder="Example"></input>
-                    <button>Apply</button>
+              <div className={style.couponDiv}>
+                <div className={style.couponDiscount}>
+                  <h5>Coupon Discount</h5>
+                  <div className={style.couponCode}>
+                    <label>Couple Code</label>
+                    <div className={style.couponApply}>
+                      <input type="search" placeholder="Example"></input>
+                      <button>Apply</button>
+                    </div>
                   </div>
                 </div>
               </div>
+
               <div className={style.couponDetail}>
                 <div className={style.price}>
                   <p>Orginal Price</p>

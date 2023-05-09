@@ -1,6 +1,7 @@
 import logo from "../../images/Layer 1.png";
 import cartImg from "../../images/Icon Cart.png";
 import dropdownImg from "../../images/dropdown.png";
+import menuDropdown from "../../images/Navbar/Mobile/menuDropdown.png";
 import logoMobile from "../../images/Navbar/logo.png";
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -48,29 +49,59 @@ export default function Navbar() {
             {dropdown === true ? (
               <div className="menuDetails">
                 <ul>
-                  <li>
-                    <Link to="/">Sign in</Link>
+                  <li className="signIn">
+                    <Link to="/">
+                      <button id="signIn">Sign in</button>
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/register">Sign up</Link>
+                    <Link to="/register">
+                      <button id="signUp">Sign up</button>
+                    </Link>
                   </li>
-                  <li>
+                  <li id="dropdownMenuMobile">
                     <Link to="/#">Level Test</Link>
                   </li>
-                  <li>
+                  <li id="dropdownMenuMobile">
                     <Link to="/courseList">Courses</Link>
                   </li>
-                  <li>
+                  <li id="dropdownMenuMobile">
                     <Link to="/#">Learning Resources</Link>
-                    <img src={dropdownImg} alt="dropdown"></img>
+                    <img src={menuDropdown} alt="dropdown"></img>
                   </li>
-                  <li>
+                  <li id="dropdownMenuMobile">
                     <Link to="/aboutUs">About us</Link>
                   </li>
                 </ul>
               </div>
             ) : (
-              <div></div>
+              <div className="menuDetailsClose">
+                <ul>
+                  <li className="signIn">
+                    <Link to="/">
+                      <button id="signIn">Sign in</button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/register">
+                      <button id="signUp">Sign up</button>
+                    </Link>
+                  </li>
+                  <li id="dropdownMenuMobile">
+                    <Link to="/#">Level Test</Link>
+                  </li>
+                  <li id="dropdownMenuMobile">
+                    <Link to="/courseList">Courses</Link>
+                  </li>
+                  <li id="dropdownMenuMobile">
+                    <Link to="/#">Learning Resources</Link>
+                    <img src={menuDropdown} alt="dropdown"></img>
+                  </li>
+                  <li id="dropdownMenuMobile">
+                    <Link to="/aboutUs">About us</Link>
+                  </li>
+                </ul>
+              </div>
             )}
           </div>
         </div>

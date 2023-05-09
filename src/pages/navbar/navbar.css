@@ -80,7 +80,7 @@
 #addToCart {
   display: flex;
 }
-.cartAndMenu{
+.cartAndMenu {
   display: none;
 }
 @media screen and (max-width: 768px) {
@@ -128,29 +128,100 @@
   .menuDetails li {
     display: block;
   }
+  .menuDetailsClose {
+    border-radius: 4px;
+  }
+  .menuDetailsClose li {
+    display: block;
+  }
   .menuDetails {
     position: absolute;
     background-color: #f9f9f9;
-    width: 250px;
-    height: 300px;
+    width: 375px;
+    height: 400px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     top: 50px;
-    right: -170px;
+    right: -18px;
     z-index: 1;
-    transform: translateX(-50%);
+    transform: translateY(0%);
     transition: transform linear 0.2s;
+  }
+  .menuDetailsClose {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 375px;
+    height: 400px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 50px;
+    left: -350px;
+    z-index: 1;
+    transition: transform linear 0.2s;
+    transform: translateY(-200%);
   }
   .navbar-mobile-right h6 {
     cursor: pointer;
   }
-  .menuDetails li{
+  .menuDetails li {
+    color: #9387a8;
     padding-top: 5px;
     height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
   }
-  .menuDetails li:hover{
-    background-color: #9387a8;
+  .menuDetails button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #9453ff;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
   }
-  .course-part-1{
-    display: block;
+  .menuDetailsClose li {
+    color: #9387a8;
+    padding-top: 5px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .menuDetailsClose button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #9453ff;
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  #signIn {
+    color: #9453ff;
+    background-color: #ffffff;
+  }
+  #signUp {
+    color: #ffffff;
+    background-color: #9453ff;
+  }
+  #dropdownMenuMobile {
+    text-align: left;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .menuDetails ul {
+    width: 95%;
+    margin: auto;
+  }
+  .menuDetailsClose ul {
+    width: 95%;
+    margin: auto;
+  }
+  .signIn {
+    margin-bottom: 16px;
   }
 }

@@ -234,6 +234,9 @@
   cursor: pointer;
   text-decoration: underline;
 }
+.yourCartMobile {
+  display: none;
+}
 @media screen and (min-width: 1440px) {
   .courseDetail {
     width: 367px;
@@ -266,6 +269,11 @@
     margin-right: 12px;
   }
 }
+@media screen and (max-width: 1280px) {
+  .couponApply input {
+    margin-bottom: 8px;
+  }
+}
 @media screen and (max-width: 1440px) {
   .courseDetail {
     max-width: 367px;
@@ -275,6 +283,7 @@
     margin-top: 24px;
     height: 150px;
     border-bottom: 1px solid #cac1d8;
+    padding: 0 16px;
   }
 
   .couponCode {
@@ -306,7 +315,7 @@
   .coupon {
     width: 40%;
   }
-  .fee{
+  .fee {
     margin: 0;
   }
 }
@@ -332,9 +341,156 @@
   font-weight: bold;
   font-size: large;
 }
-.cart1 p{
-    color: #554766;
+.cart1 p {
+  color: #554766;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+@media screen and (max-width: 768px) {
+  .cart {
+    margin: 0;
+    margin-top: 24px;
+  }
+  .cart_details {
+    display: block;
+  }
+  .yourCart {
+    display: none;
+  }
+  .yourCartMobile {
+    display: block;
+    width: 96%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding-top: 16px;
+    margin: auto;
+    max-width: 343px;
+  }
+  .course {
+    display: flex;
+    justify-content: start;
+  }
+  .course img {
+    width: 120px;
+    height: 120px;
+  }
+  .course h6 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .courseDetail button {
+    font-style: normal;
     font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .fee {
+    width: 100%;
+    display: flex;
+    height: auto;
+    /* align-items: center; */
+  }
+  .fee h6 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    height: 24px;
+  }
+  .fee p {
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+    height: 24px;
+  }
+  .courseDetail {
+    margin-top: 4px;
+    height: auto;
+  }
+  .category {
+    margin-top: 4px;
+  }
+  .category button {
+    margin: 0;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    height: 24px;
+  }
+  .courses {
+    margin-top: 24px;
+    height: 150px;
+    border-bottom: 1px solid #cac1d8;
+    padding: 0 16px;
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  .yourCartMobile h5 {
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
     font-size: 20px;
     line-height: 28px;
+    padding-left: 32px;
+  }
+  .course img {
+    margin: 0;
+    margin-right: 8px;
+  }
+  .remove p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+  }
+  .coupon {
+    width: 96%;
+    margin: 0;
+    margin: auto;
+  }
+  .title h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .couponDiscount {
+    padding: 0;
+    padding: 0 16px;
+    padding-top: 16px;
+  }
+  .couponDiscount h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .couponCode label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .coupon {
+    max-width: 343px;
+    margin-top: 24px;
+  }
+  .couponApply {
+    display: flex;
+    justify-content: space-between;
+  }
+  .couponApply input {
+    width: 207px;
+  }
+  .couponApply button {
+    max-width: 100px;
+  }
 }

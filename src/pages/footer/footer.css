@@ -30,9 +30,34 @@
   justify-content: space-between;
   margin: 2% auto;
 }
-p{
-  color: #FFFFFF;
+p {
+  color: #ffffff;
 }
-.title p{
-  color: #FFFFFF !important;
+.title p {
+  color: #ffffff !important;
+}
+@media screen and (max-width: 768px) {
+  #footer-bg img {
+    position: absolute;
+    width: auto;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 500px;
+    z-index: -1;
+  }
+  .category {
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .social-media {
+    width: 35%;
+    margin-bottom: 24px;
+  }
+  .title{
+    margin-top: 10%;
+  }
+  #logo{
+    margin-top: 30%;
+  }
 }
