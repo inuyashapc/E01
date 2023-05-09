@@ -59,8 +59,98 @@
 .learningResources {
   margin: auto;
 }
-.learningResources img{
-    width: 20px;
-    height: 20px;
-    margin: auto;
+.learningResources img {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+.badge {
+  position: relative;
+  /* display: inline-block; */
+  width: 12px;
+  height: 12px;
+  padding: 8px 8px;
+  background-color: #f44336;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.8em;
+  right: 16px;
+  bottom: 10px;
+}
+#addToCart {
+  display: flex;
+}
+.cartAndMenu{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar img {
+    width: 40px;
+    height: 40px;
   }
+  .navbar {
+    padding: 0%;
+    height: 88px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .navbar-category {
+    display: none;
+  }
+  .navbar-right {
+    display: none;
+    width: 100%;
+    height: 88px;
+  }
+  .navbar-mobile-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  #logoPC {
+    display: none;
+  }
+  .logoMobile {
+    display: flex;
+    align-items: center;
+  }
+  .cartAndMenu {
+    display: flex;
+    align-items: center;
+  }
+  .cartAndMenu img {
+    width: 24px;
+    height: 24px;
+  }
+  .menuDetails {
+    border-radius: 4px;
+  }
+  .menuDetails li {
+    display: block;
+  }
+  .menuDetails {
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 250px;
+    height: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 50px;
+    right: -170px;
+    z-index: 1;
+    transform: translateX(-50%);
+    transition: transform linear 0.2s;
+  }
+  .navbar-mobile-right h6 {
+    cursor: pointer;
+  }
+  .menuDetails li{
+    padding-top: 5px;
+    height: 40px;
+  }
+  .menuDetails li:hover{
+    background-color: #9387a8;
+  }
+  .course-part-1{
+    display: block;
+  }
+}

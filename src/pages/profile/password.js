@@ -1,17 +1,26 @@
+import "./profilePage.css";
 export default function Password() {
   return (
-    <div>
-      <div>
-        <label>Current Password</label>
-        <input type="text" placeholder="Example"></input>
-      </div>
-      <div>
-        <label>New Password</label>
-        <input type="text" placeholder="Example"></input>
-      </div>
-      <div>
-        <label>Re-type Password</label>
-        <input type="text" placeholder="Example"></input>
+    <div className="password">
+      <div className="changePassword">
+        <div className="changePasswordDetail">
+          <label>Current Password</label>
+          <br />
+          <input type="text" placeholder="Example"></input>
+        </div>
+        <div className="changePasswordDetail">
+          <label>New Password</label>
+          <br />
+          <input type="text" placeholder="Example"></input>
+        </div>
+        <div className="changePasswordDetail">
+          <label>Re-type Password</label>
+          <br />
+          <input type="text" placeholder="Example"></input>
+        </div>
+        <div className="saveChanges">
+          <button>Save changes</button>
+        </div>
       </div>
     </div>
   );

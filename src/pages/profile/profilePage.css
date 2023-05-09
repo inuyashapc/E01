@@ -4,17 +4,19 @@
 }
 .profile {
   background-color: #f7f5fa;
-  position: absolute;
-  z-index: -1;
+  position: relative;
+  z-index: 1;
 }
 .profilePage {
+  position: relative;
   display: flex;
   margin: 0 80px;
   margin-top: 52px;
+  z-index: 2;
 }
 
 .profileDetails {
-  width: 411px;
+  width: 30%;
   height: 724px;
   margin: 0 auto;
   padding: 0 40px;
@@ -94,6 +96,7 @@
 .editUser img {
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
 .userInfomationDetails {
@@ -124,6 +127,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
+  height: 28px;
 }
 .userInfomationDetails input {
   color: #281c42;
@@ -139,10 +143,25 @@
 .UserInfoDetails {
   margin-left: 12px;
 }
+.edit input {
+  padding-left: 12px;
+  border: 1px solid #add8e6;
+  border-radius: 4px;
+}
+.edit input:focus {
+  border: 2px solid #add8e6;
+  box-shadow: 0 0 5px #add8e6;
+  padding-left: 12px;
+  outline: none;
+  border-radius: 4px;
+}
+.edit2 input {
+  background-color: #ffffff;
+  border: 1.6px solid #ffffff;
+}
 .processCourse {
-  /* width: 75%; */
-  /* width: 845px;
-  height: 721px; */
+  width: 65%;
+  height: 724px;
   background-color: #ffffff;
   margin-left: 24px;
 }
@@ -150,8 +169,9 @@
   color: #281c42;
 }
 .processCourseNavbar {
+  background-color: #f7f5fa;
   display: flex;
-  width: 845px;
+  /* width: 845px; */
   height: 42px;
 }
 .processCourseNavbar p {
@@ -192,8 +212,8 @@
 .show_courseDetail {
   display: block;
   margin-top: 59px;
-  width: 845px;
-  height: 679px;
+  /* width: 845px; */
+  /* height: 679px; */
 }
 .courseRegisters {
   display: flex;
@@ -285,4 +305,57 @@
 .borderCourse {
   margin: 60px 48px 0 48px;
   border-bottom: 1px solid #9387a8;
+}
+.password {
+  /* width: 845px; */
+  height: 679px;
+  padding: 98px 162px 0px 163px;
+}
+.changePassword {
+  width: 520px;
+  height: 404px;
+  text-align: left;
+}
+.changePasswordDetail label {
+  color: #554766;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+.changePasswordDetail input {
+  color: #9387a8;
+  width: 520px;
+  height: 48px;
+  border: 1px solid #cac1d8;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+  margin-bottom: 36px;
+}
+.changePassword input::placeholder {
+  padding: 12px 0 12px 12px;
+}
+.saveChanges {
+  text-align: right;
+}
+.saveChanges button {
+  color: #f2ebfd;
+  background-color: #cac1d8;
+  margin-top: 24px;
+  width: 154px;
+  height: 40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer {
+  background-color: #f7f5fa;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
 }

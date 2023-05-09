@@ -18,7 +18,7 @@ function ProfilePage() {
   const [profile, setProfile] = useState({
     name: "Tran Van Nhan",
     phone: "0960 123 456",
-    birthday: "04/05/1996",
+    birthday: "1996-05-04",
     email: "huongnt@gmail.com",
   });
   const updateToggle = (id) => {
@@ -61,8 +61,16 @@ function ProfilePage() {
             <div className="userInfomations">
               <p>User Infomation</p>
               <div className="editUser">
-                <img src={editImg} alt="edit"></img>
-                <p onClick={() => handleEdit()}>Edit</p>
+                <img
+                  onClick={() => handleEdit()}
+                  src={editImg}
+                  alt="edit"
+                ></img>
+                {edit === true ? (
+                  <p onClick={() => handleEdit()}>Done</p>
+                ) : (
+                  <p onClick={() => handleEdit()}>Edit</p>
+                )}
               </div>
             </div>
             <div className="userInfomationDetails">
@@ -70,16 +78,25 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Họ và tên</p>
                 {edit === true ? (
-                  <input
-                    type="text"
-                    name="name"
-                    defaultValue={profile.name}
-                    // value={profile.name}
-                    onChange={handleChange}
-                  />
+                  <div className="edit">
+                    <input
+                      type="text"
+                      name="name"
+                      defaultValue={profile.name}
+                      // value={profile.name}
+                      onChange={handleChange}
+                    />
+                  </div>
                 ) : (
-                  // <h6>a</h6>
-                  <h6>{profile.name}</h6>
+                  <div className="edit2">
+                    <input
+                      type="text"
+                      name="name"
+                      defaultValue={profile.name}
+                      onChange={handleChange}
+                      disabled
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -88,14 +105,24 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Số điện thoại</p>
                 {edit === true ? (
-                  <input
-                    name="phone"
-                    type="text"
-                    onChange={handleChange}
-                    defaultValue={profile.phone}
-                  />
+                  <div className="edit">
+                    <input
+                      name="phone"
+                      type="text"
+                      onChange={handleChange}
+                      defaultValue={profile.phone}
+                    />
+                  </div>
                 ) : (
-                  <h6>{profile.phone}</h6>
+                  <div className="edit2">
+                    <input
+                      type="text"
+                      name="phone"
+                      defaultValue={profile.phone}
+                      onChange={handleChange}
+                      disabled
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -104,14 +131,24 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Ngày sinh</p>
                 {edit === true ? (
-                  <input
-                    name="birthday"
-                    type="date"
-                    defaultValue={profile.birthday}
-                    onChange={handleChange}
-                  />
+                  <div className="edit">
+                    <input
+                      name="birthday"
+                      type="date"
+                      defaultValue={profile.birthday}
+                      onChange={handleChange}
+                    />
+                  </div>
                 ) : (
-                  <h6>{profile.birthday}</h6>
+                  <div className="edit2">
+                    <input
+                      type="date"
+                      name="birthday"
+                      defaultValue={profile.birthday}
+                      onChange={handleChange}
+                      disabled
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -120,14 +157,24 @@ function ProfilePage() {
               <div className="UserInfoDetails">
                 <p>Email</p>
                 {edit === true ? (
-                  <input
-                    name="email"
-                    type="email"
-                    defaultValue={profile.email}
-                    onChange={handleChange}
-                  />
+                  <div className="edit">
+                    <input
+                      name="email"
+                      type="email"
+                      defaultValue={profile.email}
+                      onChange={handleChange}
+                    />
+                  </div>
                 ) : (
-                  <h6>{profile.email}</h6>
+                  <div className="edit2">
+                    <input
+                      type="email"
+                      name="email"
+                      defaultValue={profile.email}
+                      onChange={handleChange}
+                      disabled
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -222,9 +269,14 @@ function ProfilePage() {
           <div className={toggle === 2 ? "show_courseDetail" : "courseDetail"}>
             <Password />
           </div>
+          <div className={toggle === 2 ? "show_courseDetail" : "courseDetail"}>
+            <Password />
+          </div>
         </div>
       </div>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </div>
   );
 }

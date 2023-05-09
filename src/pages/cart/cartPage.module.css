@@ -20,7 +20,7 @@
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  width: 751px;
+  max-width: 751px;
   padding: 24px 40px 0 40px;
 }
 .yourCart h5 {
@@ -64,11 +64,7 @@
   margin-right: 8px;
   height: 28px;
 }
-.courseDetail {
-  width: 367px;
-  height: 60px;
-  margin-right: 40px;
-}
+
 .fee {
   width: 69px;
   height: 56px;
@@ -106,11 +102,7 @@
   width: 59px;
   height: 24px;
 }
-.courses {
-  margin-top: 24px;
-  height: 104px;
-  border-bottom: 1px solid #cac1d8;
-}
+
 .coupon {
   text-align: left;
   width: 489px;
@@ -138,19 +130,8 @@
   font-size: 14px;
   line-height: 20px;
 }
-.couponCode {
-  width: 409px;
-  height: 100px;
-}
 .couponApply {
   margin-top: 8px;
-}
-.couponApply input {
-  width: 297px;
-  height: 48px;
-  border: 1px solid #cac1d8;
-  border-radius: 4px;
-  margin-right: 12px;
 }
 .couponApply input::placeholder {
   color: #9387a8;
@@ -186,13 +167,6 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-}
-.discount {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-  width: 409px;
-  height: 24px;
 }
 .discount p {
   color: #554766;
@@ -233,7 +207,7 @@
 .checkout button {
   color: #ffffff;
   background-color: #9453ff;
-  width: 409px;
+  width: 100%;
   height: 56px;
   font-style: normal;
   font-weight: 700;
@@ -259,4 +233,108 @@
 .remove p:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+@media screen and (min-width: 1440px) {
+  .courseDetail {
+    width: 367px;
+    height: 60px;
+    margin-right: 40px;
+  }
+  .courses {
+    margin-top: 24px;
+    height: 104px;
+    border-bottom: 1px solid #cac1d8;
+  }
+  .couponCode {
+    width: 409px;
+    height: 100px;
+  }
+
+  .discount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 409px;
+    height: 24px;
+  }
+
+  .couponApply input {
+    width: 297px;
+    height: 48px;
+    border: 1px solid #cac1d8;
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .courseDetail {
+    max-width: 367px;
+    height: 60px;
+  }
+  .courses {
+    margin-top: 24px;
+    height: 150px;
+    border-bottom: 1px solid #cac1d8;
+  }
+
+  .couponCode {
+    height: 100px;
+  }
+
+  .discount {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    max-width: 409px;
+    height: 24px;
+  }
+
+  .couponApply input {
+    max-width: 297px;
+    height: 48px;
+    border: 1px solid #cac1d8;
+    border-radius: 4px;
+    margin-right: 12px;
+  }
+  .cart {
+    margin: 64px 80px 160px 80px;
+    justify-content: space-between;
+  }
+  .yourCart {
+    width: 55%;
+  }
+  .coupon {
+    width: 40%;
+  }
+  .fee{
+    margin: 0;
+  }
+}
+.cart1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+.cart1 img {
+  width: 280px;
+  height: 300px;
+}
+.cart1 button {
+  background: #9453ff;
+  border-radius: 4px;
+  width: 432px;
+  height: 56px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: large;
+}
+.cart1 p{
+    color: #554766;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
 }

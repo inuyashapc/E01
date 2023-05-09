@@ -1,13 +1,26 @@
 import logo from "../../images/Layer 1.png";
-import cart from "../../images/Icon Cart.png";
-import dropdown from "../../images/dropdown.png";
+import cartImg from "../../images/Icon Cart.png";
+import dropdownImg from "../../images/dropdown.png";
+import logoMobile from "../../images/Navbar/logo.png";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { cartList } from "../redux/selector";
+import { useState } from "react";
 export default function Navbar() {
+  const cart = useSelector(cartList);
+  const [dropdown, setDropdown] = useState(false);
+  const handleDropdown = () => {
+    console.log(dropdown);
+    setDropdown(!dropdown);
+  };
   return (
     <>
       <div className="navbar">
-        <img src={logo} alt="logo"></img>
+        <img src={logo} alt="logo" id="logoPC"></img>
+        <div className="logoMobile">
+          <img src={logoMobile} alt="logoMobile"></img>
+        </div>
         <div className="navbar-category">
           <div className="learningResources">
             <Link to="/#">Level Test</Link>
@@ -17,15 +30,56 @@ export default function Navbar() {
           </div>
           <div className="learningResources">
             <Link to="/#">Learning Resources</Link>
-            <img src={dropdown} alt="dropdown"></img>
+            <img src={dropdownImg} alt="dropdown"></img>
           </div>
           <div className="learningResources">
             <Link to="/aboutUs">About us</Link>
           </div>
         </div>
+        <div className="cartAndMenu">
+          <Link to="/cart" id="addToCart">
+            <img src={cartImg} alt="cart"></img>
+            <div className="badge">
+              <p>{cart.length}</p>
+            </div>
+          </Link>
+          <div className="navbar-mobile-right">
+            <h6 onClick={() => handleDropdown()}>☰</h6>
+            {dropdown === true ? (
+              <div className="menuDetails">
+                <ul>
+                  <li>
+                    <Link to="/">Sign in</Link>
+                  </li>
+                  <li>
+                    <Link to="/register">Sign up</Link>
+                  </li>
+                  <li>
+                    <Link to="/#">Level Test</Link>
+                  </li>
+                  <li>
+                    <Link to="/courseList">Courses</Link>
+                  </li>
+                  <li>
+                    <Link to="/#">Learning Resources</Link>
+                    <img src={dropdownImg} alt="dropdown"></img>
+                  </li>
+                  <li>
+                    <Link to="/aboutUs">About us</Link>
+                  </li>
+                </ul>
+              </div>
+            ) : (
+              <div></div>
+            )}
+          </div>
+        </div>
         <div className="navbar-right">
-          <Link to="/cart">
-            <img src={cart} alt="cart"></img>
+          <Link to="/cart" id="addToCart">
+            <img src={cartImg} alt="cart"></img>
+            <div className="badge">
+              <p>{cart.length}</p>
+            </div>
           </Link>
           <Link to="/">
             <button id="btn-left">Sign in</button>
