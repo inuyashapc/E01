@@ -27,7 +27,6 @@
   justify-content: space-between;
 }
 .details-title {
-  width: 70%;
   margin-top: 62px;
 }
 .details-title p {
@@ -46,10 +45,6 @@
   height: 64px;
   font-size: 48px;
   margin: 4px 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 64px;
 }
 .avt-name {
   display: flex;
@@ -434,19 +429,23 @@
   display: none;
 }
 .details-title {
-  width: 70%;
+  width: 45%;
 }
 .part2 {
-  width: 30%;
+  width: 45%;
+  margin-right: 40px;
 }
 .khoahoc img {
   width: 100%;
 }
-.learning {
+.details {
+  justify-content: center;
+}
+.learning{
   padding: 24px 24px 0 24px;
 }
 @media screen and (max-width: 768px) {
-  .details-title {
+  .details-title{
     width: 100%;
   }
   .courseDetails {
@@ -582,9 +581,6 @@
   }
   .part2 {
     display: none;
-  }
-  .part2Mobile {
-    display: block;
   }
 }
 @media screen and (max-width: 430px) {

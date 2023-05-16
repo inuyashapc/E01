@@ -21,16 +21,16 @@ import nuahinhtron from "../../images/AboutUs/nuahinhtron.png";
 import van2 from "../../images/AboutUs/van2.png";
 import may2 from "../../images/AboutUs/may2.png";
 import Footer from "../footer/footer";
-import "./AboutUs.css";
+import style from "./AboutUs.module.css";
 export default function AboutUs() {
   return (
-    <div className="aboutUs">
+    <div className={style.aboutUs}>
       <Navbar />
-      <div className="first">
-        <div className="chambi">
+      <div className={style.first}>
+        <div className={style.chambi}>
           <img src={chambi} alt="chambi"></img>
         </div>
-        <div className="first-details">
+        <div className={style.firstDetails}>
           <h1>Who are we?</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus risus
@@ -39,24 +39,24 @@ export default function AboutUs() {
             elementum enim faucibus morbi enim fusce:
           </p>
         </div>
-        <div className="first-images">
+        <div className={style.firstImages}>
           <img src={a1} alt="a1"></img>
         </div>
       </div>
-      <div className="second">
-        <div className="may">
+      <div className={style.second}>
+        <div className={style.may}>
           <img src={may} alt="may"></img>
         </div>
-        <div className="van">
+        <div className={style.van}>
           <img src={van} alt="van"></img>
         </div>
-        <div className="tamgiac">
+        <div className={style.tamgiac}>
           <img src={tamgiac} alt="tamgiac"></img>
         </div>
-        <div className="nuahinhtron">
+        <div className={style.nuahinhtron}>
           <img src={nuahinhtron} alt="nuahinhtron"></img>
         </div>
-        <div className="second-left">
+        <div className={style.secondLeft}>
           <h2>The Levion story</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst
@@ -66,28 +66,30 @@ export default function AboutUs() {
             sagittis viverra tortor eu tempus. Nibh urna ullamcorper venenatis.
           </p>
         </div>
-        <div className="second-right">
-          <img src={a2} alt="a1"></img>
-          <div className="play">
-            <img src={play} alt="play"></img>
+        <div className={style.secondRight}>
+          <div className={style.secondRightImg}>
+            <img src={a2} alt="a1"></img>
+            <div className={style.play}>
+              <img src={play} alt="play"></img>
+            </div>
           </div>
         </div>
       </div>
-      <div className="thirds">
-        <div className="third-left">
+      <div className={style.thirds}>
+        <div className={style["third-left"]}>
           <img src={a3} alt="a1"></img>
-          <div className="chambi2">
+          <div className={style.chambi2}>
             <img src={chambi} alt="van"></img>
           </div>
         </div>
-        <div className="may2">
+        <div className={style.may2}>
           <img src={may2} alt="may2"></img>
         </div>
-        <div className="van2">
+        <div className={style.van2}>
           <img src={van2} alt="van2"></img>
         </div>
-        <div className="third-right">
-          <div className="third-right-details">
+        <div className={style["third-right"]}>
+          <div className={style["third-right-details"]}>
             <img src={eyes} alt="eyes"></img>
             <h2>Our Vision</h2>
             <p>
@@ -99,32 +101,35 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="fourth">
-        <div className="fourth-left">
-          <div className="fourth-left-detail">
-            <img src={mission} alt="mission"></img>
-            <h2>Our Mission</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus
-              risus non venenatis dolor nisl tellus habitant aliquam. Dignissim
-              tellus, eu eu sed malesuada pharetra aliquam eu.Dignissim tellus,
-              Tellus elementum enim faucibus morbi enim fusce:
-            </p>
+      <div className={style.fourth}>
+        <div className={style["fourth-left"]}>
+          <div className={style["fourth-left-detail"]}>
+            <div className={style.details}>
+              <img src={mission} alt="mission"></img>
+              <h2>Our Mission</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus
+                risus non venenatis dolor nisl tellus habitant aliquam.
+                Dignissim tellus, eu eu sed malesuada pharetra aliquam
+                eu.Dignissim tellus, Tellus elementum enim faucibus morbi enim
+                fusce:
+              </p>
+            </div>
           </div>
         </div>
-        <div className="van41">
+        <div className={style.van41}>
           <img src={van} alt="van41"></img>
         </div>
-        <div className="tamgiac41">
+        <div className={style.tamgiac41}>
           <img src={tamgiac} alt="tamgiac41"></img>
         </div>
-        <div className="fourth-right">
+        <div className={style["fourth-right"]}>
           <img src={a4} alt="a1"></img>
         </div>
       </div>
-      <div className="fifth">
-        <div className="fifth-left">
-          <div className="fifth-details">
+      <div className={style.fifth}>
+        <div className={style["fifth-left"]}>
+          <div className={style["fifth-details"]}>
             <h2>Our “Vi” Mascot story</h2>
             <p>
               At eu ut vitae platea at in. In porttitor mollis eu et ornare odio
@@ -140,17 +145,18 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="van52">
+        <div className={style.van52}>
           <img src={van2} alt="van2"></img>
         </div>
-        <div className="fifth-right">
+        <div className={style["fifth-right"]}>
           <img src={a5} alt="a1"></img>
         </div>
       </div>
-      <div className="sixth">
-        <div className="six-details">
-          <div className="six-details-contents">
+      <div className={style.sixth}>
+        <div className={style["six-details"]}>
+          <div className={style["six-details-contents"]}>
             <h2>The Levion Team</h2>
+            <div className={style.gach}></div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dictumst
               sed massa tempor, sagittis non consequat pretium urna nisi. Vitae,
@@ -159,30 +165,56 @@ export default function AboutUs() {
               suscipit sagittis viverra tortor eu tempus. Nibh urna ullamcorper
               venenatis.
             </p>
+            <div className={style["six-images-mobile"]}>
+              <div className={style["six-images-first"]}>
+                <div className={style.i11}>
+                  <img src={a61} alt="a1"></img>
+                </div>
+                <div className={style.i21}>
+                  <img src={a64} alt="a1"></img>
+                </div>
+              </div>
+              <div className={style["six-images-first"]}>
+                <div className={style.i12}>
+                  <img src={a62} alt="a1"></img>
+                </div>
+                <div className={style.i22}>
+                  <img src={a65} alt="a1"></img>
+                </div>
+              </div>
+              <div className={style["six-images-first"]}>
+                <div className={style.i13}>
+                  <img src={a63} alt="a1"></img>
+                </div>
+                <div className={style.i23}>
+                  <img src={a66} alt="a1"></img>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="six-images">
-          <div className="six-images-first">
-            <div className="i11">
+        <div className={style["six-images"]}>
+          <div className={style["six-images-first"]}>
+            <div className={style.i11}>
               <img src={a61} alt="a1"></img>
             </div>
-            <div className="i21">
+            <div className={style.i21}>
               <img src={a64} alt="a1"></img>
             </div>
           </div>
-          <div>
-            <div className="i12">
+          <div className={style["six-images-first"]}>
+            <div className={style.i12}>
               <img src={a62} alt="a1"></img>
             </div>
-            <div className="i22">
+            <div className={style.i22}>
               <img src={a65} alt="a1"></img>
             </div>
           </div>
-          <div>
-            <div className="i13">
+          <div className={style["six-images-first"]}>
+            <div className={style.i13}>
               <img src={a63} alt="a1"></img>
             </div>
-            <div className="i23">
+            <div className={style.i23}>
               <img src={a66} alt="a1"></img>
             </div>
           </div>

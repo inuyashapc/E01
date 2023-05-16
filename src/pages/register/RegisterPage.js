@@ -1,12 +1,12 @@
 import vn from "../../images/vietnam 1.png";
 import layer from "../../images/Layer 1.png";
-import "../register/register.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingIcon from "../../Components/loading";
 import useLogicRegister from "../register/useLogicRegister";
+import style from "./register.module.css";
 function Register() {
   const {
     validMsg,
@@ -19,15 +19,15 @@ function Register() {
   } = useLogicRegister();
   return (
     <>
-      <div className="register-background">
-        <img src={vn} alt="" />
+      <div className={style.registerBackground}>
+        <img src={vn} alt="vn" />
       </div>
       <form>
-        <div className="register-detail-img">
-          <img src={layer} alt="" />
+        <div className={style.registerDetailiImg}>
+          <img src={layer} alt="layer" />
         </div>
         <h2>Create an account</h2>
-        <div className="content">
+        <div className={style.content}>
           <label htmlFor="fullname">
             Full Name <span style={{ color: "red" }}>*</span>
           </label>
@@ -71,7 +71,7 @@ function Register() {
           <small style={{ color: "red" }}>{validMsg.password}</small>
           <br />
         </div>
-        <div className="checkbox">
+        <div className={style.checkbox}>
           <input
             name="isChecked"
             type="checkbox"
@@ -94,7 +94,7 @@ function Register() {
           </button>
         ) : (
           <button type="button">
-            <div className="loader"></div>
+            <div className={style.loader}></div>
           </button>
         )}
         <ToastContainer />

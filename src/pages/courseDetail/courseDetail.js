@@ -11,6 +11,7 @@ import Instructor from "./instructor";
 import StudentFeedback from "./studentFeedback";
 import { useParams } from "react-router-dom";
 import fakeDate from "../../fakeAPI/data.json";
+import AddToCartMobile from "./addToCartMobile";
 export default function CourseDetail() {
   const { id } = useParams();
   console.log(id);
@@ -25,15 +26,15 @@ export default function CourseDetail() {
         </div>
         <div className="details">
           <div className="details-title">
-            <p>Course Category</p>
+            <p id="courseCategory">Course Category</p>
             <h2>{course.name}</h2>
-            <p>Last update December 1, 2022</p>
+            <p id="lastUpdate">Last update December 1, 2022</p>
             <div className="avt-name">
               <img src={avt} alt="avt"></img>
               <p>Kathryn Murphy</p>
             </div>
             <div className="vote-enrolled">
-              <div className="vote">
+              <div className="votes">
                 <p>4.5 / 5</p>
                 <div className="star">
                   <img src={star} alt=""></img>
@@ -42,12 +43,15 @@ export default function CourseDetail() {
                   <img src={star} alt=""></img>
                   <img src={star} alt=""></img>
                 </div>
-                <p>(100)</p>
+                <div className="rate">
+                  <p>(100)</p>
+                </div>
               </div>
               <div className="enrolled">
                 <p>100 alreadey enrolled</p>
               </div>
             </div>
+            <AddToCartMobile />
             <div className="aboutThisCourse">
               <h4>About this Course</h4>
               <p>

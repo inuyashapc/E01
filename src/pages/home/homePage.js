@@ -14,7 +14,6 @@ import h12 from "../../images/h12.png";
 import h13 from "../../images/h13.png";
 import h14 from "../../images/h14.png";
 import cow from "../../images/cow.png";
-import hinhchunhat from "../../images/hinhchunhat.png";
 import fb from "../../images/facebook.png";
 import discord from "../../images/discord.png";
 import vector11 from "../../images/Vector 1.png";
@@ -22,12 +21,29 @@ import star from "../../images/star.png";
 import Navbar from "../navbar/navbar";
 import "./homePage.css";
 import Footer from "../footer/footer";
+import Tariq from "../../images/HomePage/Tariq.png";
+import KonradS from "../../images/HomePage/KonradS.png";
+import Gina from "../../images/HomePage/Gina.png";
+import BackgroundFirst from "./backgroundFirst";
+import BackgroundSecond from "./backgroundSecond";
+import BackgroundThird from "./backgroundThird";
+import BackgroundFourth from "./backgroundFourth";
+import BackgroundFourth2 from "./backgroundFourth2";
+import BackgroundFifth from "./backgroundFifth";
+import CarouselImages from "./carousel";
+import CarouselPart1 from "./carouselPart1";
 function HomePage() {
   return (
     <>
       <div className="background"></div>
-      <div>
+      <div className="home">
         <Navbar />
+        <BackgroundFirst />
+        <BackgroundSecond />
+        <BackgroundThird />
+        <BackgroundFourth2 />
+        <BackgroundFourth />
+        <BackgroundFifth />
         <div className="header">
           <h1>Vietnamese Journey with LEVION</h1>
           <p>
@@ -35,27 +51,29 @@ function HomePage() {
             according to you target market. We helped more than 1000 product in
             United States
           </p>
-          <div className="image-home">
-            <div id="image-home-first">
-              <div id="h2">
-                <img src={vector1} alt="anh" />
+          <div className="bg2">
+            <div className="image-home">
+              <div id="image-home-first">
+                <div id="h2">
+                  <img src={vector1} alt="anh" />
+                </div>
+                <div id="h3">
+                  <img src={vector2} alt="anh" />
+                </div>
               </div>
-              <div id="h3">
-                <img src={vector2} alt="anh" />
+              <div id="image-home-second">
+                <button>Test Now</button>
+                <div id="h1">
+                  <img src={layer11} alt="anh" />
+                </div>
               </div>
-            </div>
-            <div id="image-home-second">
-              <button>Test Now</button>
-              <div id="h1">
-                <img src={layer11} alt="anh" />
-              </div>
-            </div>
-            <div id="image-home-third">
-              <div id="h4">
-                <img src={vector3} alt="anh" />
-              </div>
-              <div id="h5">
-                <img src={vector4} alt="anh" />
+              <div id="image-home-third">
+                <div id="h4">
+                  <img src={vector3} alt="anh" />
+                </div>
+                <div id="h5">
+                  <img src={vector4} alt="anh" />
+                </div>
               </div>
             </div>
           </div>
@@ -74,19 +92,19 @@ function HomePage() {
               </p>
             </div>
             <div className="part-second-image">
-              <div>
+              <div className="fourActivity">
                 <img src={home1} alt="anh" />
                 <h4>Travel</h4>
               </div>
-              <div>
+              <div className="fourActivity">
                 <img src={home2} alt="anh" />
                 <h4>Work and Live</h4>
               </div>
-              <div>
+              <div className="fourActivity">
                 <img src={home3} alt="anh" />
                 <h4>Communication</h4>
               </div>
-              <div>
+              <div className="fourActivity">
                 <img src={home4} alt="anh" />
                 <h4>Have Fun</h4>
               </div>
@@ -99,9 +117,7 @@ function HomePage() {
                 <img src={learn} alt="anh" />
               </div>
               <div className="part-third-detail">
-                <div className="hinhchunhat">
-                  <img src={hinhchunhat} alt="hinhchunhat"></img>
-                </div>
+                <div className="hinhchunhat"></div>
                 <div className="third">
                   <div className="third-details">
                     <img src={achievement} alt="anh" />
@@ -142,6 +158,7 @@ function HomePage() {
                     </p>
                   </div>
                 </div>
+                <CarouselPart1 />
               </div>
             </div>
           </div>
@@ -196,7 +213,7 @@ function HomePage() {
                   </p>
                 </div>
                 <div className="card-name">
-                  <img src={h11} alt="anh" />
+                  <img src={Tariq} alt="anh" />
                   <div>
                     <h4>Tariq</h4>
                     <p>Master Your Pronunciation Course</p>
@@ -226,7 +243,7 @@ function HomePage() {
                   </p>
                 </div>
                 <div className="card-name">
-                  <img src={h11} alt="anh" />
+                  <img src={KonradS} alt="anh" />
                   <div>
                     <h4>Konrad S.</h4>
                     <p>Master Your Pronunciation Course</p>
@@ -259,7 +276,7 @@ function HomePage() {
 
                 <div className="card-name">
                   <div className="card-name-images">
-                    <img src={h11} alt="anh" />
+                    <img src={Gina} alt="anh" />
                   </div>
 
                   <div>
@@ -269,6 +286,7 @@ function HomePage() {
                 </div>
               </div>
             </div>
+            <CarouselImages />
           </div>
           <div className="part-five">
             <div className="part-five-images">
@@ -304,8 +322,10 @@ function HomePage() {
               Get a notification from us on any updates and tips for your
               learning progress.
             </p>
-            <input name="email" type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
+            <div className="search">
+              <input name="email" type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
+            </div>
           </div>
         </div>
       </div>

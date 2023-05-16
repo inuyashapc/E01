@@ -14,7 +14,6 @@
   }
 } */
 .courseList {
-  max-width: 1440px;
   margin: auto;
 }
 * {
@@ -145,7 +144,7 @@
   border-radius: 4px;
 }
 .categoryOfCourse {
-  padding: 0 40px 0 80px;
+  padding: 0 40px 0 40px;
   text-align: left;
 }
 .categoryOfCourse p {
@@ -207,6 +206,75 @@
 }
 .listMobile {
   display: none;
+}
+@media screen and (max-width: 1770px) {
+  .list {
+    width: 30%;
+  }
+  .listCourseTitle {
+    width: 100%;
+  }
+  .listCourseTitle img {
+    width: 100%;
+    height: auto;
+  }
+  .cart img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .list {
+    width: 45%;
+  }
+  .listCourseTitle {
+    width: 100%;
+  }
+  .listCourseTitle img {
+    width: 100%;
+    height: auto;
+  }
+  .cart img {
+    width: 40px;
+    height: 40px;
+  }
+  .listCourse {
+    justify-content: center;
+  }
+  .categoryOfCourse {
+    width: 20%;
+  }
+  .listPC {
+    width: 70%;
+  }
+  #search {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1076px) {
+  .list {
+    width: 100%;
+  }
+  .listCourseTitle {
+    width: 100%;
+  }
+  .listCourseTitle img {
+    width: 100%;
+    height: auto;
+  }
+  .cart img {
+    width: 40px;
+    height: 40px;
+  }
+  .categoryOfCourse {
+    width: 35%;
+  }
+  .listPC {
+    width: 70%;
+  }
+  #search {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .coursePart1Left {
@@ -322,11 +390,11 @@
     display: block;
     margin: auto;
   }
-  .listCourseTitle img{
+  .listCourseTitle img {
     width: 100%;
     height: 100%;
   }
-  .cart img{
+  .cart img {
     width: 40px;
     height: 40px;
   }

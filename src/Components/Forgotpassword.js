@@ -1,18 +1,18 @@
 import vn from "../images/vietnam 1.png";
 import layer from "../images/Layer 1.png";
-import "../Components/forgetpassword.css";
+import style from "./forgetpassword.module.css";
 function Forgotpassword() {
   return (
-    <>
-      <div class="register-background">
+    <div className={style.forgotPassword}>
+      <div className={style.registerBackground}>
         <img src={vn} alt="" />
       </div>
-      <form action="">
-        <div class="register-detail-img">
+      <form>
+        <div className={style.registerDetailImg}>
           <img src={layer} alt="" />
         </div>
         <h2>Create an account</h2>
-        <div class="content">
+        <div className={style.content}>
           <label for="email" style={{ fontWeight: "bold" }}>
             Email <span style={{ color: "red" }}>*</span>
           </label>
@@ -28,7 +28,7 @@ function Forgotpassword() {
           </a>
         </p>
       </form>
-    </>
+    </div>
   );
 }
 export default Forgotpassword;

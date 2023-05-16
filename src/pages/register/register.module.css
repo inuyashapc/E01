@@ -1,4 +1,4 @@
-.register-background img {
+.registerBackground img {
   display: block;
   position: absolute;
   width: 100%;
@@ -28,7 +28,10 @@ form {
   top: 6%;
   padding: 4% 4% 2% 4%;
 }
-.register-detail-img {
+form p{
+  color: #9387A8;
+}
+.registerDetailiImg {
   text-align: center;
 }
 form h2 {

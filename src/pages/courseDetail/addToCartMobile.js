@@ -7,13 +7,12 @@ import play from "../../images/CourseDetail/play.png";
 import book from "../../images/CourseDetail/book.png";
 import heart from "../../images/CourseDetail/heart.png";
 import khoahoc from "../../images/CourseDetail/khoahoc.png";
-export default function AddToCart() {
+export default function AddToCartMobile() {
   return (
-    <div className="part2">
+    <div className="part2Mobile">
       <div className="khoahoc">
         <img src={khoahoc} alt="khoahoc"></img>
       </div>
-      
       <div className="categories">
         <div className="category-detail">
           <div className="category-details">

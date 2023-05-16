@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { cartList } from "../redux/selector";
 import { useState } from "react";
+import { IconDropdown } from "./Icon";
 export default function Navbar() {
   const cart = useSelector(cartList);
   const [dropdown, setDropdown] = useState(false);
@@ -18,9 +19,11 @@ export default function Navbar() {
   return (
     <>
       <div className="navbar">
-        <img src={logo} alt="logo" id="logoPC"></img>
+        <Link to="/home" id="homePC"><img src={logo} alt="logo" id="logoPC"></img></Link>
         <div className="logoMobile">
-          <img src={logoMobile} alt="logoMobile"></img>
+          <Link to="/home">
+            <img src={logoMobile} alt="logoMobile"></img>
+          </Link>
         </div>
         <div className="navbar-category">
           <div className="learningResources">
@@ -31,7 +34,8 @@ export default function Navbar() {
           </div>
           <div className="learningResources">
             <Link to="/#">Learning Resources</Link>
-            <img src={dropdownImg} alt="dropdown"></img>
+            <IconDropdown />
+            {/* <img src={dropdownImg} alt="dropdown"></img> */}
           </div>
           <div className="learningResources">
             <Link to="/aboutUs">About us</Link>
@@ -67,7 +71,8 @@ export default function Navbar() {
                   </li>
                   <li id="dropdownMenuMobile">
                     <Link to="/#">Learning Resources</Link>
-                    <img src={menuDropdown} alt="dropdown"></img>
+                    <IconDropdown />
+                    {/* <img src={menuDropdown} alt="dropdown"></img> */}
                   </li>
                   <li id="dropdownMenuMobile">
                     <Link to="/aboutUs">About us</Link>
@@ -95,7 +100,8 @@ export default function Navbar() {
                   </li>
                   <li id="dropdownMenuMobile">
                     <Link to="/#">Learning Resources</Link>
-                    <img src={menuDropdown} alt="dropdown"></img>
+                    <IconDropdown />
+                    {/* <img src={menuDropdown} alt="dropdown"></img> */}
                   </li>
                   <li id="dropdownMenuMobile">
                     <Link to="/aboutUs">About us</Link>
