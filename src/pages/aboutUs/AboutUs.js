@@ -23,6 +23,16 @@ import may2 from "../../images/AboutUs/may2.png";
 import Footer from "../footer/footer";
 import style from "./AboutUs.module.css";
 export default function AboutUs() {
+  // const a = [1, 2, 3];
+  // let b = a;
+  // b[0] = 100;
+  // console.log("a", a[0]);
+  // console.log("b", b[0]);
+
+  // const x = 10;
+  // let y = x;
+  // y=100;
+
   return (
     <div className={style.aboutUs}>
       <Navbar />
@@ -175,11 +185,13 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className={style["six-images-first"]}>
-                <div className={style.i12}>
-                  <img src={a62} alt="a1"></img>
-                </div>
-                <div className={style.i22}>
-                  <img src={a65} alt="a1"></img>
+                <div className={style.middle}>
+                  <div className={style.i12}>
+                    <img src={a62} alt="a1"></img>
+                  </div>
+                  <div className={style.i22}>
+                    <img src={a65} alt="a1"></img>
+                  </div>
                 </div>
               </div>
               <div className={style["six-images-first"]}>

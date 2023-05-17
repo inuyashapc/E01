@@ -63,6 +63,10 @@
   margin: 22px 0;
 }
 
+.firstImages img {
+  width: 100%;
+}
+
 .second {
   display: flex;
   text-align: left;
@@ -95,11 +99,12 @@
   width: 50%;
   text-align: right;
   position: relative;
+  display: flex;
+  align-items: end;
 }
 
 .third-left img {
   width: 100%;
-  height: 100%;
 }
 
 .third-right {
@@ -320,6 +325,7 @@
 @media screen and (max-width: 768px) {
   .first {
     display: block;
+    padding: 0;
   }
   .firstDetails {
     width: 90%;
@@ -361,6 +367,7 @@
   }
   .secondLeft {
     width: 100%;
+    padding: 0;
     margin: 0;
   }
   .secondLeft h2 {
@@ -369,6 +376,7 @@
   .secondRight {
     width: 100%;
     margin-bottom: 16px;
+    padding: 0;
   }
   .secondRight img {
     width: 100%;
@@ -377,6 +385,7 @@
     width: 88%;
     display: block;
     margin: auto;
+    padding: 0;
     margin-top: 64px;
     margin-bottom: 64px;
   }
@@ -401,11 +410,16 @@
   .third-right-details h2 {
     margin-bottom: 8px;
   }
+  .third-right-details img {
+    width: 40px;
+    height: 40px;
+  }
   .fourth {
     width: 88%;
     margin: auto;
     margin-top: 64px;
     flex-direction: column-reverse;
+    padding: 0;
   }
   .fourth-left {
     width: 100%;
@@ -433,6 +447,7 @@
     margin: auto;
     margin-top: 64px;
     display: block;
+    padding: 0;
   }
   .fifth-left {
     width: 100%;
@@ -461,14 +476,20 @@
     margin: auto;
     margin-top: 64px;
     display: block;
+    margin-bottom: 296px;
   }
   .six-details {
     width: 100%;
   }
   .six-details-contents {
     margin: 0;
-    min-height: 343px;
+    min-height: 542px;
     padding: 40px 16px 0 16px;
+    position: relative;
+  }
+  .six-images-mobile {
+    position: absolute;
+    left: 0;
   }
   .sixth {
     position: relative;
@@ -492,5 +513,48 @@
   }
   .six-images-first img {
     width: 100%;
+  }
+  .secondRight {
+    padding-right: 0;
+  }
+  .details {
+    padding: 0;
+  }
+  .details h2 {
+    margin-bottom: 8px;
+  }
+  .six-details p {
+    margin-bottom: 20px;
+  }
+  .fifth-details p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .i11,
+  .i12,
+  .i13,
+  .i21,
+  .i22,
+  .i23 {
+    margin: 0;
+    padding: 0;
+  }
+  .i11 {
+    margin-left: 28px;
+  }
+  .i21 {
+    margin-top: 16px;
+    margin-right: 16px;
+  }
+  .middle {
+    margin-top: 66px;
+  }
+  .i12{
+    margin-left: 16px;
+  }
+  .i12 img{
+    width: 95%;
   }
 }

@@ -9,6 +9,7 @@ import CourseList from "./pages/courseList/courseList";
 import CourseDetail from "./pages/courseDetail/courseDetail";
 import ProfilePage from "./pages/profile/profilePage";
 import CartPage from "./pages/cart/cartPage";
+import Course from "./pages/course/course";
 //<LoginPage /> nó là react element
 //LoginPage là react component
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/courseDetail/:id" element={<CourseDetail />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/course" element={<Course />} />
       </Routes>
     </div>
   );

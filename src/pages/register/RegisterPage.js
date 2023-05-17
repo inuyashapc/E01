@@ -22,54 +22,51 @@ function Register() {
       <div className={style.registerBackground}>
         <img src={vn} alt="vn" />
       </div>
-      <form>
+      <div className={style.formRegister}>
         <div className={style.registerDetailiImg}>
           <img src={layer} alt="layer" />
         </div>
         <h2>Create an account</h2>
         <div className={style.content}>
-          <label htmlFor="fullname">
-            Full Name <span style={{ color: "red" }}>*</span>
-          </label>
-          <br />
-          <input
-            name="fullname"
-            type="text"
-            placeholder="Your Name"
-            onChange={onChangeValue}
-            disabled={!loading}
-          />
-          <br />
-          <small style={{ color: "red" }}>{validMsg.fullname}</small>
-          <br />
-          <label htmlFor="email">
-            Email <span style={{ color: "red" }}>*</span>
-          </label>
-          <br />
-          <input
-            name="email"
-            type="email"
-            placeholder="Your Email"
-            onChange={onChangeValue}
-            disabled={!loading}
-          />
-          <br />
-          <label htmlFor="password">
-            Password <span style={{ color: "red" }}>*</span>
-          </label>
-          <br />
-          <small style={{ color: "red" }}>{validMsg.email}</small>
-          <br />
-          <input
-            name="password"
-            type="password"
-            placeholder="Your Password"
-            onChange={onChangeValue}
-            disabled={!loading}
-          />
-          <br />
-          <small style={{ color: "red" }}>{validMsg.password}</small>
-          <br />
+          <div className={style.contentDetails}>
+            <label htmlFor="fullname">
+              Full Name <span style={{ color: "red" }}>*</span>
+            </label>
+            <input
+              name="fullname"
+              type="text"
+              placeholder="Your Name"
+              onChange={onChangeValue}
+              disabled={!loading}
+            />
+            <small style={{ color: "red" }}>{validMsg.fullname}</small>
+          </div>
+          <div className={style.contentDetails}>
+            <label htmlFor="email">
+              Email <span style={{ color: "red" }}>*</span>
+            </label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Your Email"
+              onChange={onChangeValue}
+              disabled={!loading}
+            />
+            <small style={{ color: "red" }}>{validMsg.email}</small>
+          </div>
+          <div className={style.contentDetails}>
+            <label htmlFor="password">
+              Password <span style={{ color: "red" }}>*</span>
+            </label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Your Password"
+              onChange={onChangeValue}
+              disabled={!loading}
+            />
+            <small style={{ color: "red" }}>{validMsg.password}</small>
+          </div>
         </div>
         <div className={style.checkbox}>
           <input
@@ -98,10 +95,12 @@ function Register() {
           </button>
         )}
         <ToastContainer />
-        <p>
-          Already have an account? <Link to="/">Sign in</Link>
-        </p>
-      </form>
+        <div className={style.signIn}>
+          <p>
+            Already have an account? <Link to="/">Sign in</Link>
+          </p>
+        </div>
+      </div>
     </>
   );
 }

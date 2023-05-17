@@ -12,7 +12,7 @@ function Login() {
         <img src={vn} alt="a" />
       </div>
       <div className={style.formLogin}>
-        <form>
+        <div className={style.formDiv}>
           <div className={style.formLoginDiv}>
             <div className={style.registerDetailImg}>
               <img src={layer} alt="a" />
@@ -60,7 +60,7 @@ function Login() {
               </p>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

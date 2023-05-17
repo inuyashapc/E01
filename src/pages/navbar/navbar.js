@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { cartList } from "../redux/selector";
 import { useState } from "react";
-import { IconDropdown } from "./Icon";
+import { IconDropdown } from "../../Components/Icons/Dropdown";
 export default function Navbar() {
   const cart = useSelector(cartList);
   const [dropdown, setDropdown] = useState(false);
