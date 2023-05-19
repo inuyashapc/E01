@@ -17,6 +17,19 @@ export default function Note() {
         <h2>Section 1: Xin chào, cảm ơn</h2>
         <p>10. Tên Lesson 10</p>
       </div>
+      <div className={style.noteDetailPC}>
+        <div className={style.notePart1}>
+          <div className={style.notePart1Left}>
+            <h2>0:31 - 0:4</h2>
+            <h2 id={style.h22}>Section 1: Xin chào, cảm ơn</h2>
+            <p>10. Tên Lesson 10</p>
+          </div>
+          <div className={style.editAndDelete}>
+            <Edit />
+            <Delete />
+          </div>
+        </div>
+      </div>
       <div className={style.contentNote}>
         <div className={style.contentNoteDetail}>
           <p>
