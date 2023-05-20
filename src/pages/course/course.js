@@ -22,8 +22,20 @@ import Quiz, { QuizHasNotImg } from "./quiz";
 import UseLogic from "./useLogic";
 import { dataQuestions } from "../../fakeAPI/question.js";
 export default function Course() {
-  const { handleAnswer, answer, progress, tab1, tab2, tougle1, tougle2 } =
-    UseLogic();
+  const {
+    handleAnswer,
+    answer,
+    progress,
+    tab1,
+    tab2,
+    tougle1,
+    tougle2,
+    handleSubmit,
+    message,
+    messages,
+    lessons,
+    handleCollapse,
+  } = UseLogic();
 
   return (
     <div>
@@ -31,8 +43,7 @@ export default function Course() {
       <TitlePC />
       <div className={style.screenPC}>
         <div className={style.left}>
-          <Section />
-          <Section />
+          <Section sections={lessons} handleCollaspe={handleCollapse} />
         </div>
         <div className={style.right}>
           <div className={style.part1}>
@@ -287,19 +298,24 @@ export default function Course() {
                       }
                     />
                   </div>
-                  {dataQuestions.map((question) => (
-                    <Quiz
-                      question={question}
-                      index={question.id}
-                      questionName={question.questionName}
-                      img={question.img}
-                      listAnswers={question.answers}
-                      handleAnswer={handleAnswer}
-                    />
-                  ))}
-                  <div className={style.submitQuestion}>
-                    <button>Submit</button>
-                  </div>
+                  <form onSubmit={handleSubmit}>
+                    {dataQuestions.map((question) => (
+                      <Quiz
+                        question={question}
+                        index={question.id}
+                        questionName={question.questionName}
+                        img={question.img}
+                        listAnswers={question.answers}
+                        handleAnswer={handleAnswer}
+                        message={message}
+                        messages={messages}
+                      />
+                    ))}
+
+                    <div className={style.submitQuestion}>
+                      <button type="submit">Submit</button>
+                    </div>
+                  </form>
                 </div>
               </div>
             ) : (

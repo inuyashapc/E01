@@ -9,13 +9,12 @@ export default function Quiz({
   questionName,
   listAnswers,
   question,
-  handleAnswer
-
+  handleAnswer,
+  message,
+  messages,
 }) {
-  console.log("anh", img);
   return (
     <div className={style.quiz}>
-  
       {img && (
         <div>
           <img src={img} alt="i1"></img>
@@ -34,16 +33,19 @@ export default function Quiz({
             <input
               type="radio"
               name={`q${index}`}
-              value={answer.detail}
-              id={`${`q${index}`} ${answer.id}`}
+              value={answer.id}
+              id={`${`q${index}`}${answer.id}`}
               onClick={(value) => handleAnswer(answer, question)}
             ></input>
-            <label htmlFor={`${`q${index}`} ${answer.id}`}>
+            <label htmlFor={`${`q${index}`}${answer.id}`}>
               {answer.detail}
             </label>
           </div>
         ))}
       </div>
+      {messages && (
+        <h6 style={{ color: "red", fontSize:"16px" }}>{Object.values(message)[index - 1]}</h6>
+      )}
     </div>
   );
 }

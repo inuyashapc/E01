@@ -7,30 +7,49 @@ import Wait from "../../Components/Icons/Wait";
 import style from "./course.module.css";
 import Lesson from "./lesson";
 
-export const Section = () => {
+export const Section = ({ sections, handleCollaspe }) => {
   return (
     <div>
-      <div className={style.sectionLesson}>
-        <div className={style.fullSection}>
-          <div className={style.sectionTitle}>
-            <h6>Section 1: Xin chào, cảm ơn / Hello, Thank kiu</h6>
-            <DropUp />
+      {sections.map((section) => {
+        console.log("sssssss", section);
+        return (
+          <div key={section.id}>
+            <div
+              className={style.sectionLesson}
+              onClick={() => handleCollaspe(sections.id)}
+            >
+              <div className={style.fullSection}>
+                <div className={style.sectionTitle}>
+                  <h6>
+                    Section {section.id}: {section.name}
+                  </h6>
+                  <DropUp />
+                </div>
+                <div>
+                  <p>0/7 | 22min</p>
+                </div>
+              </div>
+            </div>
+            {section.lessons.map((lesson) => (
+              <Lesson
+                key={lesson.id}
+                detail={`${lesson.id}. ${lesson.name}`}
+                status={
+                  lesson.state === "done" ? (
+                    <GreenTick />
+                  ) : lesson.state === "processing" ? (
+                    <Wait />
+                  ) : (
+                    <Pause />
+                  )
+                }
+                active={lesson.state === "processing"}
+                disable={lesson.state === "pending"}
+              />
+            ))}
           </div>
-          <div>
-            <p>0/7 | 22min</p>
-          </div>
-        </div>
-      </div>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<GreenTick />} />
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Wait />} active/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
-      <Lesson detail={"1. Xin chào, cảm ơn / Hello, Thank kiu"} status={<Pause />} disable/>
+        );
+      })}
     </div>
   );
 };
