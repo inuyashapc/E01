@@ -21,6 +21,7 @@ import i4 from "../../images/Course/i4.png";
 import Quiz, { QuizHasNotImg } from "./quiz";
 import UseLogic from "./useLogic";
 import { dataQuestions } from "../../fakeAPI/question.js";
+import Search from "Components/Icons/Search";
 export default function Course() {
   const {
     handleAnswer,
@@ -93,9 +94,12 @@ export default function Course() {
                     </div>
                   </div>
                   <div className={style.searchAndFilter}>
-                    <input type="search" placeholder="Search Here" />
+                    <div className={style.searchAndImg}>
+                      <Search />
+                      <input type="search" placeholder="Search Here" />
+                    </div>
                     <button>
-                      All Lecturess
+                      All Lectures
                       <IconDropdown />
                     </button>
                   </div>
@@ -274,11 +278,17 @@ export default function Course() {
             {tougle1 === 2 ? (
               <div className={style.tab12}>
                 <div className={style.tabExercise}>
-                  <div className={style.video} onClick={() => tab1(1)}>
+                  <div
+                    className={tougle1 === 1 ? style.video : style.exercise}
+                    onClick={() => tab1(1)}
+                  >
                     <Video />
                     <p>Video</p>
                   </div>
-                  <div className={style.exercise} onClick={() => tab1(2)}>
+                  <div
+                    className={tougle1 === 2 ? style.video : style.exercise}
+                    onClick={() => tab1(2)}
+                  >
                     <Exercise />
                     <p>Exercise/Quiz</p>
                   </div>
@@ -293,6 +303,7 @@ export default function Course() {
                       % complete
                     </p>
                     <progress
+                      id={style.myProgress}
                       value={
                         Object.values(answer).length / dataQuestions.length
                       }

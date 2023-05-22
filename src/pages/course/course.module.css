@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   font-family: "Open Sans", sans-serif;
-  font-family: "Google Sans";
 }
 .title {
   display: flex;
   background: #ffffff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 24px 76px 24px 16px;
+  padding: 24px 6px 24px 16px;
 }
 .titleLeft {
   /* width: 24px;
@@ -59,6 +58,8 @@
   border-color: #9453ff;
   border-radius: 4px 4px 0px 0px;
   margin-right: 4px;
+  cursor: pointer;
+  height: 20px;
 }
 .video button {
   display: flex;
@@ -72,6 +73,14 @@
   font-size: 14px;
   line-height: 20px;
 }
+.video p:hover {
+  color: #281c42;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: underline;
+}
 .exercise {
   display: flex;
   flex-direction: row;
@@ -83,6 +92,9 @@
   border-style: solid;
   border-color: #dbdbdb;
   border-radius: 4px 4px 0px 0px;
+  cursor: pointer;
+  height: 20px;
+  margin-right: 4px;
 }
 .exercise p {
   color: #281c42;
@@ -91,6 +103,15 @@
   font-size: 14px;
   line-height: 20px;
   margin-right: 4px;
+}
+.exercise p:hover {
+  color: #281c42;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 4px;
+  text-decoration: underline;
 }
 .video-responsive {
   overflow: hidden;
@@ -153,12 +174,9 @@
   margin-top: 24px;
 }
 .searchAndFilter input {
-  width: 60%;
-  height: 36px;
-  border: 1px solid #cac1d8;
-  border-radius: 4px;
+  border: none;
 }
-.searchAndFilter input::placeholder {
+.searchAndImg input::placeholder {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -166,9 +184,7 @@
 }
 .searchAndFilter button {
   color: #554766;
-  width: 40%;
   background-color: #ffffff;
-  height: 36px;
   border: 1px solid #cac1d8;
   border-radius: 4px;
   display: flex;
@@ -179,6 +195,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+}
+.searchAndImg svg {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .transcript {
   margin: 0 16px;
@@ -413,6 +434,7 @@
   display: none;
   margin-left: 16px;
   margin-top: 24px;
+  align-items: end;
 }
 .progressBar {
   display: flex;
@@ -505,9 +527,50 @@ form {
   flex-direction: column;
   gap: 40px;
 }
+.searchAndImg {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cac1d8;
+  border-radius: 4px;
+  padding: 8px 0;
+  padding-left: 16px;
+}
+
+#myProgress {
+  width: 100%;
+  height: 20px;
+}
+#myProgress::-webkit-progress-bar,
+#myProgress::-moz-progress-bar {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+#myProgress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+#myProgress::-moz-progress-value {
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+.sectionTitle h6:hover {
+  text-decoration: underline;
+}
 @media screen and (min-width: 768px) {
   * {
     font-family: "Open Sans", sans-serif;
+  }
+  .searchAndFilter {
+    /* display: none; */
+  }
+  .part1 h5 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
   }
   .title {
     display: none;
@@ -570,6 +633,7 @@ form {
   .sectionLesson {
     column-gap: 12px;
     border-bottom: 1px solid #cac1d8;
+    cursor: pointer;
   }
   .sectionLesson h6 {
     color: #281c42;
@@ -596,6 +660,7 @@ form {
   }
   .sectionTitle {
     display: flex;
+    column-gap: 12px;
   }
   .fullSection {
     display: flex;
@@ -617,6 +682,7 @@ form {
   }
   .tab {
     margin-left: 0;
+    align-items: end;
   }
   .lessonDetail {
     display: flex;

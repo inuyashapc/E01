@@ -15,16 +15,6 @@ export default function UseLogic() {
   const handleAnswer = (_answer, question) => {
     console.log("question", answer);
     console.log("question", question);
-    // let list = [...answer, ];
-    // const { name, value } = question.target;
-    // console.log("name", name);
-    // console.log("values", value);
-    // setAnswer((preData) => {
-    //   return {
-    //     ...preData,
-    //   }
-    // });
-
     setAnswer({
       ...answer,
       [question.id]: _answer.detail,
@@ -33,7 +23,6 @@ export default function UseLogic() {
     setProgress(Object.values(answer).length);
   };
   const responseBody = {};
-  // let message = [];
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(event);
@@ -48,7 +37,6 @@ export default function UseLogic() {
             [`q${question.id}`]: "Đúng",
           };
         });
-        // message[question.id - 1] = "Đúng";
       } else {
         setMessage((preData) => {
           return {
@@ -56,7 +44,6 @@ export default function UseLogic() {
             [`q${question.id}`]: "Sai",
           };
         });
-        // message[question.id - 1] = "Sai";
       }
     });
     console.log(JSON.stringify(responseBody));
@@ -64,9 +51,6 @@ export default function UseLogic() {
     setMessages(true);
   };
   console.log("ngoai", message);
-
-  // setMessages(false);
-  // console.log("abcd", responseBody);
   const tab1 = (id) => {
     console.log(id);
     if (id === 1) {
@@ -80,9 +64,9 @@ export default function UseLogic() {
     setTougle2(id);
   };
   const handleCollapse = (id) => {
-    console.log(id);
+    console.log("collapse", id);
     setCollapsed((preData) => {
-      return { ...preData, [`q${id}`]: true ? 1 : 0 };
+      return { ...preData, [`q${id}`]: { id } };
     });
   };
   console.log(collapsed);

@@ -3,18 +3,23 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import isEmail from "validator/lib/isEmail";
 import isEmpty from "validator/lib/isEmpty";
-import { createAccountApi,activeAccountApi } from "../../Components/API/register.api";
+import {
+  createAccountApi,
+  activeAccountApi,
+} from "../../Components/API/register.api";
 
 function useLogicRegister() {
   const [formData, setFormData] = useState({
     fullname: { value: "", error: "" },
     email: { value: "", error: "" },
     password: { value: "", error: "" },
-    isChecked: {value:false},
+    isChecked: { value: false },
   });
+
   const [validMsg, setValidMsg] = useState("");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
   console.log("formData", formData);
 
   const onChangeValue = (e) => {
@@ -26,12 +31,12 @@ function useLogicRegister() {
         ...preData,
         [name]: {
           ...preData[name],
-          value: name === 'isChecked' ? value ==='true' : value,
+          value: name === "isChecked" ? value === "true" : value,
         },
       };
     });
   };
-  
+
   const validate = () => {
     const msg = {};
     if (isEmpty(formData.fullname.value)) {
@@ -58,8 +63,8 @@ function useLogicRegister() {
     setLoading(false);
     let res = {};
     try {
-      console.log("1")
-     res =await createAccountApi(formData);
+      console.log("1");
+      res = await createAccountApi(formData);
       console.log("res->", res);
       console.log(res.data);
       console.log(res.data.user);
@@ -71,14 +76,16 @@ function useLogicRegister() {
         closeButton: false,
       });
     }
+
     let response = {};
+
     try {
-     response = await activeAccountApi(res.data.user)
+      response = await activeAccountApi(res.data.user);
       if (response.data.status === 200) {
         setLoading(false);
       }
       setLoading(true);
-      toast.success("Đăng kí thành công!", {closeButton: false,});
+      toast.success("Đăng kí thành công!", { closeButton: false });
       await delay(2000);
       navigate("/");
       console.log(response);
@@ -86,9 +93,11 @@ function useLogicRegister() {
       console.log("error phase 1");
     }
   }
+
   function delay(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
+
   const debounce = (fn, delay) => {
     delay = delay || 0;
     let timerID;
