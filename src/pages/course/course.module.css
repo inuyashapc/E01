@@ -46,6 +46,7 @@
   display: flex;
   margin-left: 16px;
   margin-top: 24px;
+  align-items: end;
 }
 .video {
   background-color: #ffffff;
@@ -150,8 +151,8 @@
   color: #362355;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .unActive p:active {
   color: red;
@@ -169,11 +170,22 @@
   column-gap: 16px;
   margin-top: 12px;
 }
+.searchAndFilter2 {
+  display: flex;
+  column-gap: 16px;
+  margin-top: 12px;
+}
 .tabAndSearch {
   margin: 0 16px;
   margin-top: 24px;
 }
+.searchAndFilter2 {
+  display: none;
+}
 .searchAndFilter input {
+  border: none;
+}
+.searchAndFilter2 input {
   border: none;
 }
 .searchAndImg input::placeholder {
@@ -183,6 +195,20 @@
   line-height: 20px;
 }
 .searchAndFilter button {
+  color: #554766;
+  background-color: #ffffff;
+  border: 1px solid #cac1d8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 16px;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.searchAndFilter2 button {
   color: #554766;
   background-color: #ffffff;
   border: 1px solid #cac1d8;
@@ -437,8 +463,11 @@
   align-items: end;
 }
 .progressBar {
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
 }
 .answerQuestion {
   margin: 40px 16px 24px 16px;
@@ -564,13 +593,20 @@ form {
     font-family: "Open Sans", sans-serif;
   }
   .searchAndFilter {
-    /* display: none; */
+    display: none;
+  }
+  .searchAndFilter2 {
+    display: flex;
+    margin: 16px 16px 0 16px;
   }
   .part1 h5 {
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
+  }
+  .searchAndFilter2 button {
+    padding-right: 16px;
   }
   .title {
     display: none;
@@ -793,5 +829,25 @@ form {
   .tabExercise {
     display: flex;
     margin-left: 0;
+  }
+
+  .unActive p {
+    color: #9387a8;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .active p {
+    color: #362355;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .sectionDownload {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
   }
 }

@@ -1,32 +1,24 @@
 import style from "./course.module.css";
 import { Exercise } from "../../Components/Icons/exercise";
-import { Menu } from "../../Components/Icons/menu";
 import { Video } from "../../Components/Icons/video";
 import YoutubeEmbed from "./youtubeEmbed";
 import { IconDropdown } from "../../Components/Icons/Dropdown";
-import Edit from "../../Components/Icons/Edit";
-import Delete from "../../Components/Icons/Delete";
 import SectionDownload1 from "../../Components/Icons/sectionDownload1";
 import SectionDownload2 from "../../Components/Icons/sectionDownload2";
-import { useState } from "react";
 import { TitleMobile, TitlePC } from "./title";
 import { Section } from "./section";
 import PostQuestion from "./postQuestion";
 import Note from "./note";
 import SectionDownload from "./sectionDownload";
-import progressbar from "../../images/Course/progressbar.png";
-import i1 from "../../images/Course/i1.png";
-import i2 from "../../images/Course/i2.png";
-import i4 from "../../images/Course/i4.png";
-import Quiz, { QuizHasNotImg } from "./quiz";
+import Quiz from "./quiz";
 import UseLogic from "./useLogic";
 import { dataQuestions } from "../../fakeAPI/question.js";
 import Search from "Components/Icons/Search";
+import SearchAndFilter from "./searchAndFilter";
 export default function Course() {
   const {
     handleAnswer,
     answer,
-    progress,
     tab1,
     tab2,
     tougle1,
@@ -171,6 +163,7 @@ export default function Course() {
                 </div>
                 {tougle2 === 2 ? (
                   <div className={style.toggle2}>
+                    <SearchAndFilter />
                     <div className={style.toggle2Detail}>
                       <div className={style.question}>
                         <label>Your Question</label>
@@ -248,7 +241,7 @@ export default function Course() {
                         <h2>Section 1: Xin chào, cảm ơn</h2>
                         <p>10. Tên Lesson 10</p>
                       </div>
-                      <div className="attach">
+                      <div className={style.attach}>
                         <SectionDownload
                           img={<SectionDownload1 />}
                           detail={"Lorem ipsum dolor sit amet consectetur."}

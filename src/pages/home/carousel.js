@@ -7,6 +7,9 @@ import star from "../../images/star.png";
 import KonradS from "../../images/HomePage/KonradS.png";
 import Gina from "../../images/HomePage/Gina.png";
 export default function CarouselImages() {
+  const a = null;
+  console.log("🚀 ~ file: carousel.js:11 ~ a:", a)
+  console.log("🚀 ~ file: carousel.js:11 ~ a:", a)
   return (
     <div className="carouselMobile">
       <Carousel>
@@ -105,7 +108,7 @@ export default function CarouselImages() {
         </div>
       </Carousel>
     </div>
-      
+
 
   );
 }

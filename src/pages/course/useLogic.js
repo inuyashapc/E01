@@ -1,5 +1,5 @@
 import { dataQuestions } from "fakeAPI/question";
-import React, { useState } from "react";
+import { useState } from "react";
 import lessons from "../../fakeAPI/lessons.json";
 export default function UseLogic() {
   const [answer, setAnswer] = useState({});
