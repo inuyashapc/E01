@@ -6,11 +6,16 @@ import {
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import isEmail from "validator/lib/isEmail";
+import Firebase from "pages/firebase/app";
 
 function useLogicLogin() {
   const errorEmail = "Email đăng nhập đã tồn tại";
   const errorPassword = "Password đăng nhập không đúng";
+
+  const { signinwithredirect, resultOfRedirect, user } = Firebase()
+
   const navigate = useNavigate();
+
   const [loginData, setLoginData] = useState({
     email: { value: "", error: "" },
     password: { value: "", error: "" },
@@ -43,6 +48,7 @@ function useLogicLogin() {
       <div id="snackbar">Please enter the email</div>;
     }
   }
+
   const validateForm = (formData) => {
     let newFormData = { ...formData };
     let isValid = true;
@@ -111,10 +117,19 @@ function useLogicLogin() {
     const response = await profileAccountApi(res.data.token);
     console.log(response);
   }
+
+  async function submitForm2() {
+    signinwithredirect()
+  }
+  resultOfRedirect()
+  // console.log('abcd', resultOfRedirect());
+  console.log('abcdefgh', user);
   return {
     handleChange,
     submitForm,
     loginData,
+    submitForm2,
+    resultOfRedirect
   };
 }
 export default useLogicLogin;

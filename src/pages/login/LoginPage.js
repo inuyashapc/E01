@@ -5,7 +5,7 @@ import useLogicLogin from "./useLogicLogin";
 import { ToastContainer } from "react-toastify";
 import style from "./login.module.css";
 function Login() {
-  const { handleChange, submitForm, loginData } = useLogicLogin();
+  const { handleChange, submitForm, loginData, submitForm2 } = useLogicLogin();
   return (
     <div className={style.login}>
       <div className={style.registerBackground}>
@@ -49,7 +49,11 @@ function Login() {
                 Sign in
               </button>
             </div>
-
+            <div className={style.submitButton}>
+              <button type="button" onClick={submitForm2}>
+                Login with Google
+              </button>
+            </div>
             <ToastContainer />
             <div className={style.forgot}>
               <Link to="/forgot">Forgot password</Link>

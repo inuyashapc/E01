@@ -16,6 +16,12 @@ export default function Navbar() {
     console.log(dropdown);
     setDropdown(!dropdown);
   };
+  const session = JSON.parse(sessionStorage.getItem('user'));
+  console.log("🚀 ========= session:", session)
+  const handleSignOut = () => {
+    sessionStorage.removeItem("user");
+    window.location.reload(true)
+  }
   return (
     <>
       <div className="navbar">
@@ -118,12 +124,24 @@ export default function Navbar() {
               <p>{cart.length}</p>
             </div>
           </Link>
-          <Link to="/">
-            <button id="btn-left">Sign in</button>
-          </Link>
-          <Link to="/register">
-            <button>Sign up</button>
-          </Link>
+          {
+            session?.stsTokenManager?.accessToken ? <div className="dropdown">
+              <img src={session?.photoURL} alt='avt' />
+              <div class="dropdown-content">
+                <div>Profile</div>
+                <div>Change password</div>
+                <div onClick={handleSignOut}>Log out</div>
+              </div>
+            </div> : <div>
+              <Link to="/">
+                <button id="btn-left">Sign in</button>
+              </Link>
+              <Link to="/register">
+                <button>Sign up</button>
+              </Link>
+            </div>
+          }
+
         </div>
       </div>
     </>
